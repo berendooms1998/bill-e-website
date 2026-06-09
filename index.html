@@ -1112,6 +1112,47 @@
       .hero-meta > div:nth-child(2) { border-left: 1px solid var(--rule); padding-left: 18px; }
     }
 
+    /* ─────────────── HERO WORD CYCLER ─────────────── */
+    .hero-cycle {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      /* reserve height for one line of the display font */
+      height: 1.2em;
+    }
+    .hero-cycle-word {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      font-style: italic;
+      color: var(--accent);
+      /* start off-screen below */
+      transform: translateY(110%);
+      opacity: 0;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+      will-change: transform, opacity;
+    }
+    .hero-cycle-word.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .hero-cycle-word.exit-up {
+      transform: translateY(-110%);
+      opacity: 0;
+    }
+    /* underline on active word — matches existing em::after */
+    .hero-cycle-word::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0.08em;
+      height: 0.12em;
+      background: var(--signal);
+      z-index: -1;
+      opacity: .85;
+    }
+    html[data-palette="midnight"] .hero-cycle-word { color: var(--accent); }
+    html[data-palette="midnight"] .hero-cycle-word::after { background: var(--signal); opacity: .25; }
+
     /* reveal */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -1182,8 +1223,12 @@
         </div>
         <h1 class="display">
           Jouw&nbsp;bon,<br>
-          <em>automatisch</em><br>
-          digitaal.
+          <span class="hero-cycle" id="hero-cycle" aria-live="polite">
+            <span class="hero-cycle-word active" data-index="0">automatisch.</span>
+            <span class="hero-cycle-word" data-index="1">digitaal.</span>
+            <span class="hero-cycle-word" data-index="2">online.</span>
+            <span class="hero-cycle-word" data-index="3">vindbaar.</span>
+          </span>
         </h1>
         <p class="hero-sub">
           Bill-e koppelt kassabonnen automatisch aan betalingen.
@@ -1439,7 +1484,7 @@
           Korte berichten lezen we met aandacht.
         </p>
         <p class="contact-note">
-          Of mail direct naar <a href="mailto:berend@bill-e.com">berend@bill-e.com</a>
+          Of mail direct naar <a href="/cdn-cgi/l/email-protection#4f2d2a3d2a212b0f2d262323622a612c2022"><span class="__cf_email__" data-cfemail="2c4e495e4942486c4e4540400149024f4341">[email&#160;protected]</span></a>
         </p>
       </div>
 
@@ -1492,7 +1537,7 @@
     </div>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ─── Defaults from EDITMODE block ──────────────────────────────
     const DEFAULTS = JSON.parse(
       document.getElementById('tweak-defaults').textContent
@@ -1560,6 +1605,33 @@
 
     // ─── Audience tabs (focus the selected card as featured) ─────────
     // Audience cards: hover to feature on desktop. No JS needed for tab state.
+
+    // ─── Hero word cycler ─────────────────────────────────────────
+    (function() {
+      const cycle = document.getElementById('hero-cycle');
+      if (!cycle) return;
+      const words = cycle.querySelectorAll('.hero-cycle-word');
+      let current = 0;
+      const INTERVAL = 2400;
+
+      setInterval(() => {
+        const prev = current;
+        current = (current + 1) % words.length;
+        // exit current word upward
+        words[prev].classList.remove('active');
+        words[prev].classList.add('exit-up');
+        // enter next word from below
+        words[current].classList.remove('exit-up');
+        // force reflow so transition fires from the "below" position
+        void words[current].offsetHeight;
+        words[current].classList.add('active');
+
+        // clean exit-up class after transition
+        setTimeout(() => {
+          words[prev].classList.remove('exit-up');
+        }, 650);
+      }, INTERVAL);
+    })();
 
     // ─── Reveal on scroll ────────────────────────────────────────────
     const observer = new IntersectionObserver((entries) => {

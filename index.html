@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F1ECE0" />
   <title>Bill-e — Digitale kassabonnen, automatisch gekoppeld</title>
 
   <!-- Canonical -->
@@ -800,34 +801,6 @@
 
     /* ─────────────── AUDIENCE ─────────────── */
     .who { border-top: 1px solid var(--rule); }
-    .who-tabs {
-      display: inline-flex;
-      gap: 4px;
-      padding: 4px;
-      background: var(--paper);
-      border: 1px solid var(--rule);
-      border-radius: 999px;
-      margin-bottom: 28px;
-    }
-    .who-tab {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 8px 16px;
-      border-radius: 999px;
-      cursor: pointer;
-      color: var(--muted);
-      transition: color .2s, background .2s;
-      border: none;
-      background: transparent;
-    }
-    .who-tab[data-active="true"] {
-      background: var(--ink);
-      color: var(--bg);
-    }
-    .who-tab:hover:not([data-active="true"]) { color: var(--ink); }
-
     .who-grid {
       position: relative;
     }
@@ -1156,6 +1129,30 @@
     /* reveal */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* privacy note under the contact form */
+    .form-privacy {
+      margin-top: 12px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    /* prevent the longest cycling word from clipping on small phones */
+    @media (max-width: 380px) {
+      h1.display { font-size: clamp(40px, 14.5vw, 52px); }
+    }
+
+    /* ─────────────── REDUCED MOTION ─────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .ticker-track { animation: none; }
+      .nav-meta .pulse,
+      .pill.live .d,
+      .phase-foot .d { animation: none; }
+      .hero-cycle-word { transition: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
   </style>
 
   <!-- Structured data -->
@@ -1174,6 +1171,7 @@
         "areaServed": "NL",
         "address": {
           "@type": "PostalAddress",
+          "addressLocality": "Apeldoorn",
           "addressCountry": "NL"
         }
       },
@@ -1203,7 +1201,7 @@
     <a href="#top" class="logo">Bill<span class="dash">-</span><span class="e">e</span></a>
     <div class="nav-meta">
       <span class="pulse"></span>
-      <span>Live · Apeldoorn · Fase 1</span>
+      <span>Live · Otterlo · Fase 1</span>
     </div>
     <div class="nav-links">
       <a href="#top">Home</a>
@@ -1219,11 +1217,11 @@
       <div class="hero-text">
         <div class="eyebrow">
           <span class="bar"></span>
-          <span>Fase 01 · <b>Nu actief in Apeldoorn</b></span>
+          <span>Fase 01 · <b>Nu actief in Otterlo</b></span>
         </div>
         <h1 class="display">
           Jouw&nbsp;bon,<br>
-          <span class="hero-cycle" id="hero-cycle" aria-live="polite">
+          <span class="hero-cycle" id="hero-cycle">
             <span class="hero-cycle-word active" data-index="0">automatisch.</span>
             <span class="hero-cycle-word" data-index="1">digitaal.</span>
             <span class="hero-cycle-word" data-index="2">online.</span>
@@ -1231,7 +1229,7 @@
           </span>
         </h1>
         <p class="hero-sub">
-          Bill-e koppelt kassabonnen automatisch aan betalingen.
+          Bill-e koppelt jouw digitale kassabon automatisch aan je betaling.
           Geen papier. Geen scannen. Altijd inzicht —
           voor consumenten én bedrijven.
         </p>
@@ -1247,7 +1245,7 @@
           <b>01</b>
           <span>Live · ’26</span>
         </div>
-        <div class="receipt" role="img" aria-label="Voorbeeld digitale bon van Koe in Apeldoorn">
+        <div class="receipt" role="img" aria-label="Voorbeeld digitale bon van Koe in Otterlo">
           <div class="receipt-head">
             <div>
               <div class="receipt-merchant">Koe</div>
@@ -1267,7 +1265,7 @@
 
           <div class="r-meta">
             <span>BTW 9% · € 1,53</span>
-            <span>20 / 05 / 26</span>
+            <span id="r-date">20 / 05 / 26</span>
           </div>
 
         </div>
@@ -1280,7 +1278,7 @@
         </div>
         <div>
           <span class="k">Locatie</span>
-          <span class="v">Apeldoorn, NL</span>
+          <span class="v">Otterlo, NL</span>
         </div>
         <div>
           <span class="k">Partner #01</span>
@@ -1298,7 +1296,7 @@
       </div>
       <div class="band-stat">
         <div class="num">01</div>
-        <div class="lbl">Partner-locatie · Apeldoorn</div>
+        <div class="lbl">Partner-locatie · Otterlo</div>
       </div>
       <div class="band-stat">
         <div class="num">0%</div>
@@ -1319,7 +1317,7 @@
         <h2 class="section-title reveal">Twee fasen,<br><em>één visie.</em></h2>
       </div>
       <p class="section-desc reveal">
-        We bouwen stapsgewijs. Fase 1 is vandaag al operationeel bij onze eerste partner in Apeldoorn.
+        We bouwen stapsgewijs. Fase 1 is vandaag al operationeel bij onze eerste partner in Otterlo.
         Fase 2 brengt volledige automatisering — zonder extra hardware.
       </p>
     </div>
@@ -1361,7 +1359,7 @@
           </div>
           <div class="phase-detail">
             <div>
-              <div class="phase-detail-label">Veldnotitie · Apeldoorn</div>
+              <div class="phase-detail-label">Veldnotitie · Otterlo</div>
               <p class="phase-note">
                 <span class="key">Nu operationeel</span> bij Koe in Otterlo. Eerste echte transacties worden binnenkort live getest samen met onze eerste gebruikers.
               </p>
@@ -1495,6 +1493,7 @@
           <label for="org" style="margin-top:6px;">Organisatie <span style="text-transform:none;letter-spacing:0;">(optioneel)</span></label>
           <input id="org" type="text" name="organisation" placeholder="Bedrijf of rol" />
           <button type="submit">Aanmelden →</button>
+          <p class="form-privacy">We gebruiken je e-mailadres alleen voor updates over Bill-e — geen spam, geen doorverkoop. Uitschrijven kan altijd.</p>
         </div>
       </form>
     </div>
@@ -1586,11 +1585,18 @@
     document.getElementById('t-ticker').addEventListener('click', () => setKey({ ticker: !state.ticker }));
     document.getElementById('t-serif').addEventListener('click', () => setKey({ serifHeadline: !state.serifHeadline }));
 
+    // ─── Demo receipt date — always today, never stale ──────────────
+    const now = new Date();
+    const dd = String(now.getDate()).padStart(2, '0');
+    const mm = String(now.getMonth() + 1).padStart(2, '0');
+    const yy = String(now.getFullYear()).slice(-2);
+    document.getElementById('r-date').textContent = `${dd} / ${mm} / ${yy}`;
+
     // ─── Ticker content ─────────────────────────────────────────────
     const tickerItems = [
-      ['Bill-e · Fase 01', 'live in Apeldoorn'],
+      ['Bill-e · Fase 01', 'live in Otterlo'],
       ['Partner #01', 'Koe · Otterlo'],
-      ['Demo-bon', '€ 18,50 · 20·05·26'],
+      ['Demo-bon', `€ 18,50 · ${dd}·${mm}·${yy}`],
       ['BTW', 'automatisch bijgehouden'],
       ['Geen app · geen account', 'unieke link'],
       ['Fase 02', 'roadmap · bankkoppeling'],
@@ -1608,6 +1614,7 @@
 
     // ─── Hero word cycler ─────────────────────────────────────────
     (function() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       const cycle = document.getElementById('hero-cycle');
       if (!cycle) return;
       const words = cycle.querySelectorAll('.hero-cycle-word');

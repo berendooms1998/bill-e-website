@@ -884,6 +884,43 @@
     }
 
 
+    /* ─────────────── FAQ ─────────────── */
+    .faq { border-top: 1px solid var(--rule); }
+    .faq-list { max-width: 760px; }
+    .faq-item {
+      border-bottom: 1px solid var(--rule);
+    }
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px 0;
+      font-family: 'Newsreader', serif;
+      font-size: 21px;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item summary:hover { color: var(--accent); }
+    .faq-answer {
+      padding: 0 0 24px;
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--ink-2);
+      max-width: 640px;
+    }
+
     /* ─────────────── CONTACT ─────────────── */
     .contact {
       border-top: 1px solid var(--rule);
@@ -1182,6 +1219,60 @@
         "name": "Bill-e",
         "inLanguage": "nl-NL",
         "publisher": { "@id": "https://www.bill-e.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.bill-e.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wat is een digitale kassabon?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Een digitale kassabon is een elektronisch aankoopbewijs met dezelfde gegevens als een papieren bon: alle artikelen, bedragen, BTW en de datum. Bij Bill-e wordt de bon op het moment van afdrukken bij de kassa digitaal vastgelegd en open je hem direct via een unieke link — zonder papier en zonder scannen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Heb ik een app nodig voor mijn digitale bon?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. Je digitale bon opent gewoon in de browser van je telefoon, via een unieke link of een tap op de NFC-tag bij de kassa. Geen app downloaden, geen account aanmaken."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe lang moet ik bonnetjes bewaren voor de Belastingdienst?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ondernemers (ZZP en MKB) zijn verplicht hun administratie — inclusief bonnetjes — zeven jaar te bewaren. Digitale bonnen tellen daarbij gewoon mee, zolang ze volledig en leesbaar zijn. Bill-e legt artikelen, bedragen en BTW automatisch vast. Als consument is het slim om een bon te bewaren zolang de garantie op het product loopt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe digitaliseer ik als ondernemer mijn kassabonnen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Met Bill-e hoef je je huidige systemen daarvoor vrijwel niet aan te passen. Je kassa, printer en afrekenproces blijven precies zoals ze zijn — Bill-e legt de bon vast op het moment van afdrukken en maakt er automatisch een digitale versie van. Geen nieuwe kassasoftware, geen extra handelingen voor je personeel, en je klant opent de bon zonder app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Werkt Bill-e met boekhoudsoftware zoals Exact, Moneybird of e-Boekhouden.nl?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Koppelingen met Exact, Moneybird en e-Boekhouden.nl staan op de roadmap voor fase 2, zodat zakelijke aankopen met artikelen en BTW direct in je boekhouding staan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Waar is Bill-e al actief?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bill-e draait nu live bij onze eerste partner: restaurant Koe in Otterlo. Vanuit deze eerste locatie breiden we uit naar meer winkels en horeca in Nederland."
+            }
+          }
+        ]
       }
     ]
   }
@@ -1207,6 +1298,7 @@
       <a href="#top">Home</a>
       <a href="#hoe-werkt-het">Hoe het werkt</a>
       <a href="#voor-wie">Voor wie</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </div>
   </nav>
@@ -1460,14 +1552,96 @@
       <div class="who-card reveal" data-card="mkb">
         <div class="who-num">PROFIEL · <b>03</b></div>
         <div class="who-title">MKB</div>
-        <div class="who-desc">Koppeling met Exact en Moneybird. Medewerkers declareren moeiteloos. Minder administratie, meer overzicht.</div>
+        <div class="who-desc">Koppeling met Exact, Moneybird en e-Boekhouden.nl. Medewerkers declareren moeiteloos. Minder administratie, meer overzicht.</div>
         <div class="who-foot">
           <span class="tag">Exact</span>
           <span class="tag">Moneybird</span>
+          <span class="tag">e-Boekhouden.nl</span>
           <span class="tag">Declaraties</span>
         </div>
       </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="faq" id="faq">
+    <div class="section-head">
+      <div>
+        <div class="section-label reveal">Veelgestelde vragen</div>
+        <h2 class="section-title reveal">Alles over de<br><em>digitale kassabon.</em></h2>
+      </div>
+      <p class="section-desc reveal">
+        Hoe het werkt, wat de Belastingdienst ervan vindt en wat er
+        voor jou verandert. Staat je vraag er niet bij? Mail ons gerust.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item reveal">
+        <summary>Wat is een digitale kassabon?</summary>
+        <p class="faq-answer">
+          Een digitale kassabon is een elektronisch aankoopbewijs met precies
+          dezelfde gegevens als een papieren bon: alle artikelen, bedragen,
+          BTW en de datum. Bij Bill-e wordt de bon op het moment van afdrukken
+          bij de kassa digitaal vastgelegd. Je opent hem direct via een unieke
+          link — zonder papier en zonder scannen.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Heb ik een app nodig voor mijn digitale bon?</summary>
+        <p class="faq-answer">
+          Nee. Je digitale bon opent gewoon in de browser van je telefoon,
+          via een unieke link of een tap op de NFC-tag bij de kassa.
+          Geen app downloaden, geen account aanmaken.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Hoe lang moet ik bonnetjes bewaren voor de Belastingdienst?</summary>
+        <p class="faq-answer">
+          Ondernemers (ZZP en MKB) zijn verplicht hun administratie — inclusief
+          bonnetjes — zeven jaar te bewaren. Digitale bonnen tellen daarbij
+          gewoon mee, zolang ze volledig en leesbaar zijn. Bill-e legt artikelen,
+          bedragen en BTW automatisch vast, zodat je administratie altijd op
+          orde is. Als consument is het slim om een bon te bewaren zolang de
+          garantie op het product loopt.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Hoe digitaliseer ik als ondernemer mijn kassabonnen?</summary>
+        <p class="faq-answer">
+          Met Bill-e hoef je je huidige systemen daarvoor vrijwel niet aan te
+          passen. Je kassa, printer en afrekenproces blijven precies zoals ze
+          zijn — Bill-e legt de bon vast op het moment van afdrukken en maakt
+          er automatisch een digitale versie van. Geen nieuwe kassasoftware,
+          geen extra handelingen voor je personeel, en je klant opent de bon
+          zonder app. Interesse als winkel of horecazaak? Neem contact op.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Werkt Bill-e met boekhoudsoftware zoals Exact, Moneybird of e-Boekhouden.nl?</summary>
+        <p class="faq-answer">
+          Dat is precies waar we naartoe bouwen: zakelijke aankopen die met
+          artikelen en BTW direct in je boekhouding staan. Koppelingen met
+          Exact, Moneybird en e-Boekhouden.nl staan op de roadmap voor fase 2.
+        </p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Waar is Bill-e al actief?</summary>
+        <p class="faq-answer">
+          Bill-e draait nu live bij onze eerste partner: restaurant Koe in
+          Otterlo. Daar wordt elke kassabon automatisch digitaal vastgelegd.
+          Vanuit deze eerste locatie breiden we uit naar meer winkels en
+          horeca in Nederland.
+        </p>
+      </details>
+
     </div>
   </section>
 

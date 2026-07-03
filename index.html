@@ -1049,6 +1049,14 @@
       display: flex; gap: 18px; flex-wrap: wrap;
     }
     .footer-meta b { color: var(--ink); font-weight: 500; }
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+    .footer-links a { color: var(--ink-2); }
+    .footer-links a:hover { color: var(--accent); }
 
     /* ─────────────── DEMO ─────────────── */
     .hidden { display: none !important; }
@@ -2150,6 +2158,11 @@
   <!-- ─── FOOTER ─── -->
   <footer>
     <a href="#top" class="logo" style="font-size:20px;">Bill<span class="dash">-</span><span class="e">e</span></a>
+    <div class="footer-links">
+      <a href="/digitale-kassabon">De digitale kassabon</a>
+      <a href="/bonnetjes-bewaren">Bonnetjes bewaren</a>
+      <a href="/kassabon-kwijt">Kassabon kwijt &amp; garantie</a>
+    </div>
     <div class="footer-meta">
       <span>© 2026 BILL-E</span>
       <span>APELDOORN · <b>NL</b></span>
@@ -2249,6 +2262,16 @@
         }, reduceMotion ? 0 : 850);
       });
     })();
+
+    // ─── Lead tracking: contact form submit ─────────────────────────
+    const leadForm = document.querySelector('form.contact-card');
+    if (leadForm) {
+      leadForm.addEventListener('submit', () => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', { form: 'contact', transport_type: 'beacon' });
+        }
+      });
+    }
 
     // ─── Hero word cycler ─────────────────────────────────────────
     (function() {

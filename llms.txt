@@ -1,0 +1,26 @@
+# Bill-e
+
+> Bill-e is een Nederlands bedrijf (Apeldoorn) dat digitale kassabonnen levert voor winkels en horeca. De bon wordt op het moment van afdrukken bij de kassa automatisch digitaal vastgelegd — zonder nieuwe kassa of kassasoftware voor de winkel, en zonder app, account of e-mailadres voor de klant: die tikt met de telefoon op een NFC-tag bij de kassa en heeft direct de volledige bon (artikelen, bedragen, BTW) via een permanente link. Live sinds 2026 bij de eerste partner in Otterlo.
+
+Bill-e is a Dutch startup providing digital receipts for shops and hospitality venues. Receipts are captured automatically at the point of sale (no POS replacement needed); customers tap an NFC tag to open their full itemised receipt in the browser — no app, no account, no e-mail address.
+
+## Belangrijkste pagina's
+
+- [Home](https://www.bill-e.com/): wat Bill-e is, hoe het werkt (twee fasen), voor wie, interactieve demo, contact voor pilotlocaties
+- [De digitale kassabon](https://www.bill-e.com/digitale-kassabon): complete gids — soorten digitale bonnen, rechtsgeldigheid, waarom thermisch papier verdwijnt (BPA/BPS), waarom digitale bonnen tot nu toe alleen bij grote ketens bestaan
+- [Bonnetjes bewaren](https://www.bill-e.com/bonnetjes-bewaren): bewaartermijnen voor de Belastingdienst — 7 jaar voor ondernemers, 10 jaar bij onroerend goed, digitaal bewaren toegestaan
+- [Kassabon kwijt & garantie](https://www.bill-e.com/kassabon-kwijt): wettelijke garantie geldt ook zonder bon; welke aankoopbewijzen tellen
+- [Privacybeleid](https://www.bill-e.com/privacy): welke gegevens Bill-e verwerkt, in gewone taal
+
+## Feiten
+
+- Werkt naast elk bestaand kassasysteem; geen extra handeling voor personeel
+- Klant heeft geen app, account of e-mailadres nodig — één tik op de NFC-tag
+- Digitale bonnen zijn rechtsgeldig voor de Belastingdienst en als garantiebewijs
+- Eerste partner: restaurant Koe in Otterlo (live)
+- Oprichter: Berend Ooms, Apeldoorn, Nederland
+
+## Contact
+
+- E-mail: berend@bill-e.com
+- Pilotlocaties (winkels & horeca) gezocht in Nederland

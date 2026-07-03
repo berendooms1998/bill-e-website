@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#F1ECE0" />
-  <title>Bill-e — Digitale kassabonnen, automatisch gekoppeld</title>
+  <title>Bill-e — Digitale kassabonnen voor winkels & horeca</title>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.bill-e.com/" />
 
   <!-- Primary meta -->
-  <meta name="description" content="Bill-e koppelt kassabonnen automatisch aan jouw betaling. Digitale bon zonder papier of app, met BTW-overzicht voor ZZP en MKB. Nu actief in Otterlo." />
+  <meta name="description" content="Digitale kassabonnen voor winkels en horeca. Geen nieuwe kassa, geen app voor je klant — Bill-e legt elke bon automatisch digitaal vast. Nu live in Otterlo." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Bill-e" />
 
@@ -19,8 +19,8 @@
   <link rel="alternate" hreflang="x-default" href="https://www.bill-e.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Bill-e — Digitale kassabonnen, automatisch" />
-  <meta property="og:description" content="Bill-e koppelt kassabonnen automatisch aan jouw betaling. Geen papier, geen scannen. Altijd inzicht — voor consumenten én bedrijven." />
+  <meta property="og:title" content="Bill-e — Digitale kassabonnen voor winkels & horeca" />
+  <meta property="og:description" content="Geen nieuwe kassa, geen app voor je klant. Bill-e legt elke kassabon automatisch digitaal vast — je klant tikt de tag en heeft z'n bon." />
   <meta property="og:url" content="https://www.bill-e.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Bill-e" />
@@ -32,8 +32,8 @@
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bill-e — Digitale kassabonnen, automatisch" />
-  <meta name="twitter:description" content="Bill-e koppelt kassabonnen automatisch aan jouw betaling. Geen papier, geen scannen." />
+  <meta name="twitter:title" content="Bill-e — Digitale kassabonnen voor winkels & horeca" />
+  <meta name="twitter:description" content="Geen nieuwe kassa, geen app voor je klant. Elke kassabon automatisch digitaal." />
   <meta name="twitter:image" content="https://www.bill-e.com/og-image.png" />
 
   <!-- Favicon -->
@@ -158,18 +158,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wxo99fo5v9");
   </script>
-  <script id="tweak-defaults" type="application/json">
-  /*EDITMODE-BEGIN*/{
-    "palette": "bone",
-    "ticker": true,
-    "serifHeadline": true
-  }/*EDITMODE-END*/
-  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* default — "bone" palette, overwritten by JS on palette change */
+      /* "bone" palette */
       --bg: #F1ECE0;
       --paper: #FBF7EE;
       --ink: #0E1116;
@@ -182,51 +175,6 @@
       --signal: #C6FF4A;         /* citron lime — live/active only */
       --signal-ink: #243600;
       --warm: #C84A2A;           /* coral — used sparingly */
-    }
-
-    html[data-palette="forest"] {
-      --bg: #EEF2EA;
-      --paper: #FAFCF7;
-      --ink: #0F1A14;
-      --ink-2: #243029;
-      --muted: #5D6B5F;
-      --rule: #D6DECF;
-      --rule-strong: #B4BFAA;
-      --accent: #0F5238;
-      --accent-soft: #DDE9DD;
-      --signal: #C8F542;
-      --signal-ink: #1E2E04;
-      --warm: #B85A2C;
-    }
-
-    html[data-palette="midnight"] {
-      --bg: #0B0E14;
-      --paper: #131822;
-      --ink: #ECE7DA;
-      --ink-2: #C9C3B4;
-      --muted: #8B8676;
-      --rule: #232A36;
-      --rule-strong: #3A4150;
-      --accent: #C6FF4A;
-      --accent-soft: #1A2412;
-      --signal: #C6FF4A;
-      --signal-ink: #0B0E14;
-      --warm: #FF8A5C;
-    }
-
-    html[data-palette="paper"] {
-      --bg: #FAF6EE;
-      --paper: #FFFFFF;
-      --ink: #1A1410;
-      --ink-2: #322820;
-      --muted: #7A6F60;
-      --rule: #E5DCC8;
-      --rule-strong: #C9BB9F;
-      --accent: #C84A2A;
-      --accent-soft: #FBE4D9;
-      --signal: #FFCB45;
-      --signal-ink: #3A2400;
-      --warm: #C84A2A;
     }
 
     html { scroll-behavior: smooth; background: var(--bg); overflow-x: hidden; }
@@ -284,7 +232,6 @@
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
     }
-    html[data-ticker="off"] .ticker { display: none; }
 
     /* ─────────────── NAV ─────────────── */
     nav.top {
@@ -405,21 +352,6 @@
       z-index: -1;
       opacity: .85;
     }
-    html[data-palette="midnight"] h1.display em { color: var(--accent); }
-    html[data-palette="midnight"] h1.display em::after { background: var(--signal); opacity: .25; }
-
-    html[data-serif="off"] h1.display,
-    html[data-serif="off"] .section-title,
-    html[data-serif="off"] .logo,
-    html[data-serif="off"] .receipt-merchant,
-    html[data-serif="off"] .phase-title {
-      font-family: 'Geist', sans-serif;
-      font-weight: 500;
-      letter-spacing: -0.025em;
-    }
-    html[data-serif="off"] h1.display em,
-    html[data-serif="off"] .section-title em { font-style: normal; }
-
     .hero-sub {
       margin-top: 32px;
       font-size: 18px;
@@ -451,7 +383,6 @@
       border: 1px solid var(--ink);
     }
     .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-1px); }
-    html[data-palette="midnight"] .btn-primary:hover { color: var(--signal-ink); }
 
     .btn-ghost {
       border: 1px solid var(--rule-strong);
@@ -938,8 +869,6 @@
         box-shadow: 6px 0 0 var(--signal), -6px 0 0 var(--signal);
       }
       .who-card:hover .tag { border-color: rgba(241,236,224,0.22); color: rgba(241,236,224,0.85); }
-      html[data-palette="midnight"] .who-card:hover { background: var(--accent); color: var(--signal-ink); border-color: var(--accent); }
-      html[data-palette="midnight"] .who-card:hover .who-desc { color: rgba(11,14,20,0.7); }
     }
 
     .who-num {
@@ -1091,7 +1020,6 @@
       transition: background .2s, color .2s;
     }
     .contact-form button:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
-    html[data-palette="midnight"] .contact-form button:hover { color: var(--signal-ink); }
     .contact-note {
       margin-top: 14px;
       font-family: 'JetBrains Mono', monospace;
@@ -1122,79 +1050,276 @@
     }
     .footer-meta b { color: var(--ink); font-weight: 500; }
 
-    /* ─────────────── TWEAKS PANEL ─────────────── */
-    .tweaks {
-      position: fixed;
-      right: 20px; bottom: 20px;
-      z-index: 200;
-      background: var(--paper);
-      border: 1px solid var(--rule-strong);
-      border-radius: 8px;
-      padding: 16px;
-      width: 240px;
-      box-shadow: 0 20px 40px -20px rgba(0,0,0,0.25);
-      display: none;
-      font-family: 'Geist', sans-serif;
+    /* ─────────────── DEMO ─────────────── */
+    .hidden { display: none !important; }
+
+    .demo { border-top: 1px solid var(--rule); }
+    .demo-stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
     }
-    .tweaks.open { display: block; }
-    .tweaks-head {
+    .demo-side {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 420px;
+    }
+    .demo-tag {
+      position: relative;
+      width: 150px; height: 150px;
+      border: none;
+      border-radius: 28px;
+      background: var(--ink);
+      color: var(--signal);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 24px 48px -24px rgba(14,17,22,0.5);
+      transition: transform .15s ease;
+    }
+    .demo-tag:hover  { transform: translateY(-2px); }
+    .demo-tag:active { transform: scale(0.96); }
+    .demo-tag-ring {
+      position: absolute;
+      inset: -9px;
+      border-radius: 35px;
+      border: 1.5px solid var(--signal);
+      pointer-events: none;
+      animation: tagring 2.4s ease-out infinite;
+    }
+    @keyframes tagring {
+      0%   { transform: scale(1);    opacity: .65; }
+      70%  { transform: scale(1.12); opacity: 0; }
+      100% { transform: scale(1.12); opacity: 0; }
+    }
+    .demo-tag-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bg);
+    }
+    .demo-caption .k {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .demo-caption p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+
+    .demo-phone {
+      width: 320px;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 44px;
+      background: var(--ink);
+      padding: 12px;
+      box-shadow:
+        0 40px 80px -30px rgba(14,17,22,0.45),
+        0 2px 0 rgba(255,255,255,0.06) inset;
+    }
+    .demo-screen {
+      border-radius: 34px;
+      background: var(--bg);
+      min-height: 560px;
+      padding: 26px 18px 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .demo-wordmark {
+      font-family: 'Newsreader', serif;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+    .demo-wordmark .dash { color: var(--muted); margin: 0 1px; }
+    .demo-wordmark .e { font-style: italic; color: var(--accent); }
+    .demo-idle, .demo-loading {
+      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 14px;
+      justify-content: center;
+      text-align: center;
     }
-    .tweaks-head .t {
+    .demo-idle p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px dashed var(--rule-strong);
+      border-radius: 999px;
+      padding: 10px 18px;
+    }
+    .demo-pulse {
+      display: inline-block;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: demopulse 1.1s ease-in-out infinite;
+    }
+    @keyframes demopulse {
+      0%, 100% { opacity: 0.25; transform: scale(0.8); }
+      50%      { opacity: 1;    transform: scale(1.15); }
+    }
+    .demo-receipt { animation: demoin .5s ease; }
+    @keyframes demoin {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .demo-phone .receipt {
+      width: 100%;
+      --d: 8px;
+      padding: 22px 20px 18px;
+      box-shadow:
+        0 1px 0 var(--rule-strong),
+        0 16px 30px -18px rgba(14,17,22,0.3);
+    }
+    .demo-phone .receipt-merchant { font-size: 24px; }
+    .demo-btns { display: flex; gap: 8px; margin-top: 16px; }
+    .demo-btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px 8px;
+      border: 1px solid var(--rule-strong);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* ─────────────── VOOR WINKELS ─────────────── */
+    .merchants { border-top: 1px solid var(--rule); }
+    .m-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .m-card {
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: var(--paper);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    @media (hover: hover) {
+      .m-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px -25px rgba(14,17,22,0.4);
+      }
+    }
+    .m-num {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       letter-spacing: 0.16em;
-      text-transform: uppercase;
       color: var(--muted);
+      border-top: 1px solid var(--ink);
+      padding-top: 6px;
+      width: 40px;
     }
-    .tweaks-head button {
-      background: transparent; border: none; cursor: pointer;
-      color: var(--muted); font-size: 18px; line-height: 1; padding: 0;
+    .m-title {
+      font-family: 'Newsreader', serif;
+      font-weight: 400;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--ink);
     }
-    .tweaks-row { margin-bottom: 14px; }
-    .tweaks-row > .lbl {
-      display: block;
+    .m-desc { font-size: 14px; line-height: 1.65; color: var(--ink-2); }
+
+    .m-cta {
+      margin-top: 28px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: var(--paper);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .m-cta-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .m-cta .phase-note { max-width: 640px; }
+
+    /* ─────────────── OVER ─────────────── */
+    .about { border-top: 1px solid var(--rule); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-lede p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-bottom: 18px;
+      max-width: 560px;
+    }
+    .about-lede p:first-child {
+      font-family: 'Newsreader', serif;
+      font-size: 24px;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .about-sign {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--accent);
+      margin-top: 6px;
+    }
+    .about-facts > div {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+      align-items: baseline;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .about-facts > div:first-child { border-top: 1px solid var(--rule); }
+    .about-facts .k {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 8px;
     }
-    .tweaks-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-    .swatch {
-      aspect-ratio: 1;
-      border-radius: 6px;
-      border: 1.5px solid transparent;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, var(--a) 50%, var(--b) 50%);
+    .about-facts .v {
+      font-family: 'Newsreader', serif;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
     }
-    .swatch[data-active="true"] { border-color: var(--ink); }
-    .toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; }
-    .toggle-row .lbl { font-size: 12.5px; color: var(--ink); }
-    .toggle {
-      width: 36px; height: 20px; border-radius: 999px;
-      background: var(--rule-strong);
-      position: relative; cursor: pointer;
-      transition: background .2s;
-      border: none;
-    }
-    .toggle::after {
-      content: '';
-      position: absolute;
-      top: 2px; left: 2px;
-      width: 16px; height: 16px;
-      background: var(--paper);
-      border-radius: 50%;
-      transition: transform .2s;
-    }
-    .toggle[data-on="true"] { background: var(--ink); }
-    .toggle[data-on="true"]::after { transform: translateX(16px); }
+    .about-facts .v a { border-bottom: 1px solid var(--rule-strong); }
+    .about-facts .v a:hover { color: var(--accent); border-color: var(--accent); }
 
     /* ─────────────── RESPONSIVE ─────────────── */
     @media (max-width: 900px) {
@@ -1224,6 +1349,19 @@
       .hero-meta > div { padding: 10px 0; }
       .hero-meta > div + div { border-left: none; padding-left: 0; }
       .hero-meta > div:nth-child(2) { border-left: 1px solid var(--rule); padding-left: 18px; }
+      .demo-stage { grid-template-columns: 1fr; gap: 44px; }
+      .demo-side { max-width: none; }
+      .m-grid { grid-template-columns: 1fr; }
+      .m-cta { flex-direction: column; align-items: flex-start; gap: 22px; }
+      .about-grid { grid-template-columns: 1fr; gap: 44px; }
+    }
+
+    /* narrow phones: keep only the essential nav links so nothing overflows */
+    @media (max-width: 600px) {
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: 12.5px; }
+      .nav-links a[href="#hoe-werkt-het"],
+      .nav-links a[href="#faq"] { display: none; }
     }
 
     /* ─────────────── HERO WORD CYCLER ─────────────── */
@@ -1264,9 +1402,6 @@
       z-index: -1;
       opacity: .85;
     }
-    html[data-palette="midnight"] .hero-cycle-word { color: var(--accent); }
-    html[data-palette="midnight"] .hero-cycle-word::after { background: var(--signal); opacity: .25; }
-
     /* reveal */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -1290,7 +1425,10 @@
       .ticker-track { animation: none; }
       .nav-meta .pulse,
       .pill.live .d,
-      .phase-foot .d { animation: none; }
+      .phase-foot .d,
+      .demo-tag-ring,
+      .demo-pulse { animation: none; }
+      .demo-receipt { animation: none; }
       .hero-cycle-word { transition: none; }
       .reveal { opacity: 1; transform: none; transition: none; }
     }
@@ -1307,6 +1445,7 @@
         "name": "Bill-e",
         "url": "https://www.bill-e.com/",
         "email": "berend@bill-e.com",
+        "founder": { "@type": "Person", "name": "Berend Ooms" },
         "description": "Bill-e koppelt kassabonnen automatisch aan betalingen. Een digitale bon zonder papier, scannen of app, met automatisch BTW-overzicht voor consumenten, ZZP'ers en MKB.",
         "foundingDate": "2026",
         "areaServed": "NL",
@@ -1399,11 +1538,11 @@
       <span>Live · Otterlo · Fase 1</span>
     </div>
     <div class="nav-links">
-      <a href="#top">Home</a>
+      <a href="#demo">Demo</a>
       <a href="#hoe-werkt-het">Hoe het werkt</a>
-      <a href="#voor-wie">Voor wie</a>
+      <a href="#voor-winkels">Voor winkels</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact" class="nav-cta">Word partner</a>
     </div>
   </nav>
 
@@ -1413,25 +1552,25 @@
       <div class="hero-text">
         <div class="eyebrow">
           <span class="bar"></span>
-          <span>Fase 01 · <b>Nu actief in Otterlo</b></span>
+          <span>Voor winkels &amp; horeca · <b>Nu live in Otterlo</b></span>
         </div>
         <h1 class="display">
-          Jouw&nbsp;bon,<br>
+          Elke&nbsp;bon,<br>
           <span class="hero-cycle" id="hero-cycle">
-            <span class="hero-cycle-word active" data-index="0">automatisch.</span>
-            <span class="hero-cycle-word" data-index="1">digitaal.</span>
-            <span class="hero-cycle-word" data-index="2">online.</span>
-            <span class="hero-cycle-word" data-index="3">vindbaar.</span>
+            <span class="hero-cycle-word active" data-index="0">digitaal.</span>
+            <span class="hero-cycle-word" data-index="1">automatisch.</span>
+            <span class="hero-cycle-word" data-index="2">papierloos.</span>
+            <span class="hero-cycle-word" data-index="3">geregeld.</span>
           </span>
         </h1>
         <p class="hero-sub">
-          Bill-e koppelt jouw digitale kassabon automatisch aan je betaling.
-          Geen papier. Geen scannen. Altijd inzicht —
-          voor consumenten én bedrijven.
+          Bill-e legt elke bon vast op het moment van afdrukken en maakt er
+          een digitale kassabon van. Je kassa, printer en personeel merken
+          er niets van — je klant opent de bon met één tik, zonder app.
         </p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Blijf op de hoogte →</a>
-          <a href="#hoe-werkt-het" class="btn btn-ghost">Hoe het werkt</a>
+          <a href="#contact" class="btn btn-primary">Word pilotpartner →</a>
+          <a href="#demo" class="btn btn-ghost">Bekijk de demo</a>
         </div>
       </div>
 
@@ -1504,6 +1643,79 @@
       </div>
     </div>
   </div>
+
+  <!-- ─── DEMO ─── -->
+  <section class="demo" id="demo">
+    <div class="section-head">
+      <div>
+        <div class="section-label reveal">Probeer het zelf</div>
+        <h2 class="section-title reveal">Dit ziet je klant<br><em>na het afrekenen.</em></h2>
+      </div>
+      <p class="section-desc reveal">
+        Geen video of mockup — dit is dezelfde bonpagina die nu live draait
+        in Otterlo. Tik op de tag en zie wat je klant ziet.
+      </p>
+    </div>
+
+    <div class="demo-stage reveal">
+      <div class="demo-side">
+        <button class="demo-tag" id="demo-tag" aria-label="Simuleer een tik op de Bill-e tag">
+          <span class="demo-tag-ring" aria-hidden="true"></span>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M8.6 9.2a4 4 0 0 1 0 5.6"/>
+            <path d="M11.4 6.8a7.5 7.5 0 0 1 0 10.4"/>
+            <path d="M14.2 4.4a11 11 0 0 1 0 15.2"/>
+          </svg>
+          <span class="demo-tag-label" id="demo-tag-label">Tik hier</span>
+        </button>
+        <div class="demo-caption">
+          <span class="k">Zo werkt het bij de kassa</span>
+          <p>
+            Je klant houdt z'n telefoon tegen de Bill-e tag naast de kassa.
+            De bon staat er direct — alle artikelen, bedragen en BTW.
+            Elke tik toont de laatste bon; tik gerust nog een keer.
+          </p>
+        </div>
+      </div>
+
+      <div class="demo-phone">
+        <div class="demo-screen" id="demo-screen">
+          <div class="demo-wordmark">Bill<span class="dash">-</span><span class="e">e</span></div>
+
+          <div class="demo-idle" id="demo-idle">
+            <p>Wacht op een tik…</p>
+          </div>
+
+          <div class="demo-loading hidden" id="demo-loading">
+            <span class="demo-pulse"></span>
+          </div>
+
+          <div class="demo-receipt hidden" id="demo-receipt">
+            <div class="receipt">
+              <div class="receipt-head">
+                <div>
+                  <div class="receipt-merchant">Koe</div>
+                  <div class="receipt-addr">Dorpsstraat 1 · Otterlo</div>
+                </div>
+                <span class="receipt-live"><span class="d"></span> Live</span>
+              </div>
+              <div class="receipt-rule"></div>
+              <div id="demo-items"></div>
+              <div class="r-total"><span>Totaal</span><span class="price" id="demo-total"></span></div>
+              <div class="r-meta">
+                <span id="demo-btw"></span>
+                <span id="demo-time"></span>
+              </div>
+            </div>
+            <div class="demo-btns" aria-hidden="true">
+              <span class="demo-btn">Bewaar als foto</span>
+              <span class="demo-btn">Bewaar als PDF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ─── HOE WERKT HET ─── -->
   <section class="how" id="hoe-werkt-het">
@@ -1619,6 +1831,61 @@
     </div>
   </section>
 
+  <!-- ─── VOOR WINKELS ─── -->
+  <section class="merchants" id="voor-winkels">
+    <div class="section-head">
+      <div>
+        <div class="section-label reveal">Voor winkels &amp; horeca</div>
+        <h2 class="section-title reveal">Niets aan je kassa<br><em>hoeft anders.</em></h2>
+      </div>
+      <p class="section-desc reveal">
+        Bill-e werkt naast je bestaande kassa en printer. Eén klein kastje,
+        één tag bij de kassa — en elke bon is voortaan ook digitaal.
+      </p>
+    </div>
+
+    <div class="m-grid">
+      <div class="m-card reveal">
+        <div class="m-num">01</div>
+        <h3 class="m-title">Je kassa blijft je kassa</h3>
+        <p class="m-desc">
+          Geen nieuwe kassasoftware, geen andere printer. Bill-e leest de bon
+          mee op het moment van afdrukken — en de papieren bon blijft gewoon
+          werken zolang jij dat wilt.
+        </p>
+      </div>
+      <div class="m-card reveal">
+        <div class="m-num">02</div>
+        <h3 class="m-title">Geen extra handeling</h3>
+        <p class="m-desc">
+          Je personeel rekent af zoals altijd. Er komt geen stap bij: zodra
+          de kassa print, staat de digitale bon automatisch klaar. Niemand
+          hoeft iets nieuws te leren.
+        </p>
+      </div>
+      <div class="m-card reveal">
+        <div class="m-num">03</div>
+        <h3 class="m-title">Je klant tikt, klaar</h3>
+        <p class="m-desc">
+          De klant houdt z'n telefoon tegen de tag en heeft direct de
+          volledige bon — artikelen, bedragen en BTW. Geen app, geen account,
+          geen e-mailadres afgeven bij de kassa.
+        </p>
+      </div>
+    </div>
+
+    <div class="m-cta reveal">
+      <div>
+        <div class="m-cta-label">Pilotlocaties gezocht</div>
+        <p class="phase-note">
+          We zoeken een handvol winkels en horecazaken die <span class="key">als eerste</span>
+          digitale bonnen willen aanbieden. Wij regelen de installatie en denken met je mee.
+        </p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Word partner →</a>
+    </div>
+  </section>
+
   <!-- ─── VOOR WIE ─── -->
   <section class="who" id="voor-wie">
     <div class="section-head">
@@ -1668,6 +1935,41 @@
     </div>
   </section>
 
+  <!-- ─── OVER ─── -->
+  <section class="about" id="over">
+    <div class="section-head">
+      <div>
+        <div class="section-label reveal">Over Bill-e</div>
+        <h2 class="section-title reveal">Gebouwd in<br><em>Apeldoorn.</em></h2>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-lede reveal">
+        <p>
+          Bill-e begon met een simpele ergernis: kassabonnen. Ze vervagen,
+          raken kwijt of belanden verfrommeld in een la — terwijl je ze nodig
+          hebt voor garantie, declaraties en de Belastingdienst.
+        </p>
+        <p>
+          Daarom bouwen we de digitale kassabon zoals die hoort te zijn:
+          automatisch vastgelegd bij de kassa, direct op de telefoon van je
+          klant, zonder app of account. Sinds 2026 draait Bill-e live bij
+          onze eerste partner in Otterlo, en van daaruit breiden we uit.
+        </p>
+        <p class="about-sign">
+          Korte lijnen: je mailt niet met een supportafdeling, maar met de oprichter.
+        </p>
+      </div>
+      <div class="about-facts reveal">
+        <div><span class="k">Oprichter</span><span class="v">Berend Ooms</span></div>
+        <div><span class="k">Basis</span><span class="v">Apeldoorn, NL</span></div>
+        <div><span class="k">Gestart</span><span class="v">2026</span></div>
+        <div><span class="k">Contact</span><span class="v"><a href="mailto:berend@bill-e.com">berend@bill-e.com</a></span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── FAQ ─── -->
   <section class="faq" id="faq">
     <div class="section-head">
@@ -1712,6 +2014,7 @@
           bedragen en BTW automatisch vast, zodat je administratie altijd op
           orde is. Als consument is het slim om een bon te bewaren zolang de
           garantie op het product loopt.
+          <a href="/bonnetjes-bewaren">Lees onze volledige gids over bonnetjes bewaren →</a>
         </p>
       </details>
 
@@ -1787,82 +2090,7 @@
     </div>
   </footer>
 
-  <!-- ─── TWEAKS PANEL ─── -->
-  <div class="tweaks" id="tweaks">
-    <div class="tweaks-head">
-      <span class="t">Tweaks</span>
-      <button id="tweaks-close" aria-label="Close">×</button>
-    </div>
-    <div class="tweaks-row">
-      <span class="lbl">Palette</span>
-      <div class="tweaks-swatches" id="palette-swatches">
-        <button class="swatch" data-palette="bone"     style="--a:#F1ECE0;--b:#1F3A2E;" title="Bone & Ink"></button>
-        <button class="swatch" data-palette="forest"   style="--a:#EEF2EA;--b:#0F5238;" title="Forest"></button>
-        <button class="swatch" data-palette="midnight" style="--a:#0B0E14;--b:#C6FF4A;" title="Midnight"></button>
-        <button class="swatch" data-palette="paper"    style="--a:#FAF6EE;--b:#C84A2A;" title="Paper · Coral"></button>
-      </div>
-    </div>
-    <div class="tweaks-row">
-      <div class="toggle-row">
-        <span class="lbl">Live ticker</span>
-        <button class="toggle" id="t-ticker" data-on="true" aria-label="Toggle ticker"></button>
-      </div>
-      <div class="toggle-row">
-        <span class="lbl">Serif headlines</span>
-        <button class="toggle" id="t-serif" data-on="true" aria-label="Toggle serif"></button>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // ─── Defaults from EDITMODE block ──────────────────────────────
-    const DEFAULTS = JSON.parse(
-      document.getElementById('tweak-defaults').textContent
-        .replace(/\/\*EDITMODE-(BEGIN|END)\*\//g, '')
-    );
-    let state = { ...DEFAULTS };
-
-    function applyState() {
-      document.documentElement.dataset.palette = state.palette;
-      document.documentElement.dataset.ticker  = state.ticker ? 'on' : 'off';
-      document.documentElement.dataset.serif   = state.serifHeadline ? 'on' : 'off';
-      // Update swatches + toggles
-      document.querySelectorAll('#palette-swatches .swatch').forEach(s => {
-        s.dataset.active = String(s.dataset.palette === state.palette);
-      });
-      document.getElementById('t-ticker').dataset.on = String(!!state.ticker);
-      document.getElementById('t-serif').dataset.on  = String(!!state.serifHeadline);
-    }
-    applyState();
-
-    function setKey(patch) {
-      state = { ...state, ...patch };
-      applyState();
-      try {
-        window.parent.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*');
-      } catch(e) {}
-    }
-
-    // ─── Tweaks panel host protocol ─────────────────────────────────
-    const panel = document.getElementById('tweaks');
-    window.addEventListener('message', (e) => {
-      const d = e.data || {};
-      if (d.type === '__activate_edit_mode') panel.classList.add('open');
-      if (d.type === '__deactivate_edit_mode') panel.classList.remove('open');
-    });
-    document.getElementById('tweaks-close').addEventListener('click', () => {
-      panel.classList.remove('open');
-      try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch(e) {}
-    });
-    try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e) {}
-
-    // Wire palette swatches
-    document.querySelectorAll('#palette-swatches .swatch').forEach(s => {
-      s.addEventListener('click', () => setKey({ palette: s.dataset.palette }));
-    });
-    document.getElementById('t-ticker').addEventListener('click', () => setKey({ ticker: !state.ticker }));
-    document.getElementById('t-serif').addEventListener('click', () => setKey({ serifHeadline: !state.serifHeadline }));
-
     // ─── Demo receipt date — always today, never stale ──────────────
     const now = new Date();
     const dd = String(now.getDate()).padStart(2, '0');
@@ -1875,11 +2103,11 @@
       ['Bill-e · Fase 01', 'live in Otterlo'],
       ['Partner #01', 'Koe · Otterlo'],
       ['Demo-bon', `€ 18,50 · ${dd}·${mm}·${yy}`],
+      ['Geen nieuwe kassa', 'geen extra handeling'],
+      ['Geen app · geen account', 'één tik'],
       ['BTW', 'automatisch bijgehouden'],
-      ['Geen app · geen account', 'unieke link'],
-      ['Fase 02', 'roadmap · bankkoppeling'],
-      ['Status', 'operationeel'],
-      ['Open voor partners', 'berend@bill-e.com'],
+      ['Pilotlocaties', 'gezocht · NL'],
+      ['Word partner', 'berend@bill-e.com'],
     ];
     const track = document.getElementById('ticker-track');
     const buildItems = () => tickerItems.map(([a, b]) =>
@@ -1887,8 +2115,69 @@
     ).join('');
     track.innerHTML = buildItems() + buildItems();
 
-    // ─── Audience tabs (focus the selected card as featured) ─────────
-    // Audience cards: hover to feature on desktop. No JS needed for tab state.
+    // ─── Interactive demo (simulated NFC tap) ──────────────────────
+    (function() {
+      const tag      = document.getElementById('demo-tag');
+      const tagLabel = document.getElementById('demo-tag-label');
+      const idle     = document.getElementById('demo-idle');
+      const loading  = document.getElementById('demo-loading');
+      const receipt  = document.getElementById('demo-receipt');
+      if (!tag) return;
+
+      // A few example orders; every tap serves the next one.
+      const demoOrders = [
+        [['Cappuccino', 3.50], ['Croissant', 2.75], ['Appeltaart × 2', 9.00], ['Jus d\'orange', 3.25]],
+        [['Tosti kaas', 6.50], ['Verse muntthee', 3.75], ['Brownie', 3.95]],
+        [['Koffie verkeerd', 3.75], ['Uitsmijter', 9.50], ['Spa rood', 2.90], ['Espresso', 2.80]],
+      ];
+      let orderIndex = 0;
+      let busy = false;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const euro = n => '€ ' + n.toFixed(2).replace('.', ',');
+
+      function renderOrder(items) {
+        const list = document.getElementById('demo-items');
+        list.innerHTML = '';
+        let total = 0;
+        items.forEach(([name, price]) => {
+          total += price;
+          const row = document.createElement('div');
+          row.className = 'r-line';
+          const n = document.createElement('span');
+          n.className = 'name';
+          n.textContent = name;
+          const p = document.createElement('span');
+          p.className = 'price';
+          p.textContent = euro(price);
+          row.append(n, p);
+          list.appendChild(row);
+        });
+        document.getElementById('demo-total').textContent = euro(total);
+        // horeca-tarief: 9% BTW zit in het totaalbedrag
+        document.getElementById('demo-btw').textContent = 'BTW 9% · ' + euro(total * 9 / 109);
+        const t = new Date();
+        document.getElementById('demo-time').textContent =
+          String(t.getHours()).padStart(2, '0') + ':' + String(t.getMinutes()).padStart(2, '0') +
+          ' · ' + String(t.getDate()).padStart(2, '0') + '/' + String(t.getMonth() + 1).padStart(2, '0');
+      }
+
+      tag.addEventListener('click', () => {
+        if (busy) return;
+        busy = true;
+        tagLabel.textContent = 'Verstuurd';
+        idle.classList.add('hidden');
+        receipt.classList.add('hidden');
+        loading.classList.remove('hidden');
+        setTimeout(() => {
+          loading.classList.add('hidden');
+          renderOrder(demoOrders[orderIndex % demoOrders.length]);
+          orderIndex++;
+          receipt.classList.remove('hidden');
+          tagLabel.textContent = 'Tik nog eens';
+          busy = false;
+        }, reduceMotion ? 0 : 850);
+      });
+    })();
 
     // ─── Hero word cycler ─────────────────────────────────────────
     (function() {

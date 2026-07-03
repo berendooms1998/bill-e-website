@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F1ECE0" />
+  <title>Privacybeleid — Bill-e</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.bill-e.com/privacy" />
+
+  <!-- Primary meta -->
+  <meta name="description" content="Hoe Bill-e omgaat met je gegevens: wat we verzamelen via het contactformulier, de bonpagina en de activatie van een zaak — en welke rechten je hebt." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Bill-e" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacybeleid — Bill-e" />
+  <meta property="og:description" content="Hoe Bill-e omgaat met je gegevens — kort en in gewone taal." />
+  <meta property="og:url" content="https://www.bill-e.com/privacy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bill-e" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:image" content="https://www.bill-e.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Self-hosted fonts -->
+  <link rel="preload" href="/fonts/geist-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/geist-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/geist-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/geist-500-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/geist-500-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/jetbrains-mono-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Newsreader'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/newsreader-400-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/newsreader-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F1ECE0;
+      --paper: #FBF7EE;
+      --ink: #0E1116;
+      --ink-2: #2A2C2F;
+      --muted: #6F6A5E;
+      --rule: #D9D2C2;
+      --rule-strong: #B9B0A0;
+      --accent: #1F3A2E;
+      --accent-soft: #D8E2D8;
+      --signal: #C6FF4A;
+      --signal-ink: #243600;
+    }
+
+    html { scroll-behavior: smooth; background: var(--bg); -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Geist', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; }
+
+    /* ─── NAV ─── */
+    nav.top {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px;
+      background: color-mix(in oklab, var(--bg) 88%, transparent);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .logo {
+      display: inline-flex; align-items: baseline; gap: 2px;
+      font-family: 'Newsreader', serif; font-size: 24px;
+      letter-spacing: -0.02em; color: var(--ink); text-decoration: none;
+    }
+    .logo .e { font-style: italic; color: var(--accent); }
+    .logo .dash { color: var(--muted); margin: 0 1px; }
+    .nav-back {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+      text-decoration: none;
+    }
+    .nav-back:hover { color: var(--ink); }
+
+    /* ─── PAGE ─── */
+    main { max-width: 720px; margin: 0 auto; padding: 0 24px 100px; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+      margin: 44px 0 20px;
+    }
+    .eyebrow .bar { width: 22px; height: 1.5px; background: var(--accent); }
+
+    h1 {
+      font-family: 'Geist', sans-serif; font-weight: 500;
+      font-size: clamp(30px, 6vw, 46px); line-height: 1.08;
+      letter-spacing: -0.03em; margin-bottom: 22px;
+    }
+    h1 em { font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; }
+
+    .lede { font-size: 18px; line-height: 1.6; color: var(--ink-2); margin-bottom: 22px; }
+
+    .byline {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      letter-spacing: 0.04em; color: var(--muted);
+      display: flex; flex-wrap: wrap; gap: 14px;
+      padding-bottom: 28px; border-bottom: 1px solid var(--rule); margin-bottom: 8px;
+    }
+
+    article h2 {
+      font-family: 'Geist', sans-serif; font-weight: 500;
+      font-size: clamp(21px, 4vw, 27px); line-height: 1.18;
+      letter-spacing: -0.02em; margin: 48px 0 14px;
+    }
+    article p { font-size: 15.5px; color: var(--ink-2); margin-bottom: 14px; max-width: 640px; }
+    article ul { margin: 0 0 14px 20px; }
+    article li { font-size: 15.5px; color: var(--ink-2); margin-bottom: 8px; max-width: 620px; }
+    article li b { color: var(--ink); font-weight: 500; }
+    article a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    article a:hover { text-decoration: none; }
+
+    .note {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14.5px;
+      color: var(--ink-2);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--rule);
+      max-width: 720px; margin: 0 auto; padding: 36px 24px 56px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-meta {
+      display: flex; gap: 18px; font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    }
+    .footer-meta b { color: var(--ink); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <a href="/" class="logo">Bill<span class="dash">-</span><span class="e">e</span></a>
+    <a href="/" class="nav-back">← Terug naar bill-e.com</a>
+  </nav>
+
+  <main>
+    <div class="eyebrow"><span class="bar"></span> Privacy</div>
+    <h1>Privacybeleid, <em>in gewone taal.</em></h1>
+    <p class="lede">
+      Bill-e maakt digitale kassabonnen. Daarbij verwerken we zo min mogelijk
+      persoonsgegevens — en wat we verwerken, gebruiken we alleen waarvoor je
+      het ons gaf. Dit is de volledige lijst.
+    </p>
+    <div class="byline">
+      <span>BILL-E · APELDOORN</span>
+      <span>LAATST BIJGEWERKT · 3 JULI 2026</span>
+    </div>
+
+    <article>
+
+      <h2>Wie we zijn</h2>
+      <p>
+        Bill-e is een Nederlands bedrijf uit Apeldoorn, opgericht door Berend Ooms.
+        Voor alles rondom je gegevens kun je rechtstreeks mailen naar
+        <a href="mailto:berend@bill-e.com">berend@bill-e.com</a> — je krijgt
+        antwoord van de oprichter, niet van een afdeling.
+      </p>
+
+      <h2>Welke gegevens we verzamelen</h2>
+      <ul>
+        <li><b>Contactformulier op bill-e.com</b> — je e-mailadres en (optioneel)
+          je organisatie. We gebruiken dit alleen om je updates over Bill-e te
+          sturen. Geen spam, geen doorverkoop, uitschrijven kan altijd.</li>
+        <li><b>Activatie van een zaak (winkel of horecazaak)</b> — bij het
+          activeren van een Bill-e tag vragen we de naam en het adres van de
+          zaak, plus de naam, het e-mailadres en (optioneel) het telefoonnummer
+          van de contactpersoon. We gebruiken dit voor het account en voor
+          service-berichten over de tag.</li>
+        <li><b>Bongegevens</b> — van aangesloten zaken leggen we kassabonnen
+          digitaal vast: artikelen, bedragen, BTW en het tijdstip. Een bon bevat
+          géén naam, rekeningnummer of andere persoonsgegevens van de klant.</li>
+        <li><b>Websitestatistieken</b> — op bill-e.com gebruiken we Google
+          Analytics en Microsoft Clarity om te zien hoe de site wordt gebruikt
+          (bijvoorbeeld welke pagina's bezocht worden). De bonpagina
+          (receipt.bill-e.com) bevat <b>geen</b> statistiek- of advertentiescripts.</li>
+      </ul>
+
+      <h2>Wat we er niet mee doen</h2>
+      <p>
+        We verkopen geen gegevens door. We sturen geen reclame namens anderen.
+        We koppelen je bezoek aan de bonpagina niet aan je identiteit — een bon
+        openen kan zonder app, zonder account en zonder e-mailadres.
+      </p>
+
+      <h2>Wie er nog meer bij kunnen</h2>
+      <p>
+        We gebruiken een klein aantal diensten om Bill-e te laten draaien. Zij
+        verwerken gegevens namens ons:
+      </p>
+      <ul>
+        <li><b>Formspree</b> — verwerkt de inzendingen van het contactformulier.</li>
+        <li><b>Vercel</b> — host de website en de bonpagina.</li>
+        <li><b>Supabase</b> — de database waarin bonnen en accountgegevens staan.</li>
+        <li><b>Google Analytics &amp; Microsoft Clarity</b> — websitestatistieken op bill-e.com.</li>
+      </ul>
+
+      <h2>Hoe lang we gegevens bewaren</h2>
+      <p>
+        Contactgegevens bewaren we zolang je op de hoogte gehouden wilt worden;
+        na een uitschrijving verwijderen we ze. Accountgegevens van een zaak
+        bewaren we zolang de zaak Bill-e gebruikt. Bongegevens bewaren we voor
+        de aangesloten zaak — bewaartermijnen daarvoor volgen de regels van de
+        Belastingdienst (zie onze <a href="/bonnetjes-bewaren">gids over bonnetjes
+        bewaren</a>).
+      </p>
+
+      <h2>Je rechten</h2>
+      <p>
+        Je mag altijd opvragen welke gegevens we van je hebben, ze laten
+        corrigeren of laten verwijderen. Eén mail naar
+        <a href="mailto:berend@bill-e.com">berend@bill-e.com</a> is genoeg.
+        Ben je het ergens niet mee eens, dan kun je ook een klacht indienen bij
+        de <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a>.
+      </p>
+
+      <div class="note">
+        Bill-e is in ontwikkeling. Als er iets verandert aan welke gegevens we
+        verwerken, werken we deze pagina bij — de datum bovenaan laat zien hoe
+        actueel hij is.
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <a href="/" class="logo" style="font-size:20px;">Bill<span class="dash">-</span><span class="e">e</span></a>
+    <div class="footer-meta">
+      <span>© 2026 BILL-E</span>
+      <span>APELDOORN · <b>NL</b></span>
+      <span><a href="/privacy" style="text-decoration:none;">PRIVACY</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>

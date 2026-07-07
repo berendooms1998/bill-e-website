@@ -2252,6 +2252,13 @@
         idle.classList.add('hidden');
         receipt.classList.add('hidden');
         loading.classList.remove('hidden');
+        // op mobiel staat de telefoon-mockup onder de knop, buiten beeld —
+        // scroll hem in beeld zodat de bon zichtbaar verschijnt
+        const screen = document.getElementById('demo-screen');
+        const r = screen.getBoundingClientRect();
+        if (r.top < 0 || r.bottom > window.innerHeight) {
+          screen.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+        }
         setTimeout(() => {
           loading.classList.add('hidden');
           renderOrder(demoOrders[orderIndex % demoOrders.length]);

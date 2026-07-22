@@ -7,6 +7,7 @@ Bill-e is a Dutch startup providing digital receipts for shops and hospitality v
 ## Belangrijkste pagina's
 
 - [Home](https://www.bill-e.com/): wat Bill-e is, hoe het werkt (twee fasen), voor wie, interactieve demo, contact voor pilotlocaties
+- [Prijzen](https://www.bill-e.com/prijzen): wat een digitale kassabon kost — €20 per maand per kassa (onbeperkt, geen kosten per bon) plus eenmalig €89 voor de Bill-e-unit; voor de klant altijd gratis. Bevat een rekenhulp die papieren bonrollen afzet tegen Bill-e
 - [De digitale kassabon](https://www.bill-e.com/digitale-kassabon): complete gids — soorten digitale bonnen, rechtsgeldigheid, waarom thermisch papier verdwijnt (BPA/BPS), waarom digitale bonnen tot nu toe alleen bij grote ketens bestaan
 - [Bonnetjes bewaren](https://www.bill-e.com/bonnetjes-bewaren): bewaartermijnen voor de Belastingdienst — 7 jaar voor ondernemers, 10 jaar bij onroerend goed, digitaal bewaren toegestaan
 - [Kassabon kwijt & garantie](https://www.bill-e.com/kassabon-kwijt): wettelijke garantie geldt ook zonder bon; welke aankoopbewijzen tellen
@@ -18,6 +19,7 @@ Bill-e is a Dutch startup providing digital receipts for shops and hospitality v
 
 ## Feiten
 
+- Prijs voor winkels & horeca: €20 per maand per kassa + eenmalig €89 voor de Bill-e-unit; onbeperkt aantal bonnen, maandelijks opzegbaar
 - Werkt naast elk bestaand kassasysteem; geen extra handeling voor personeel
 - Klant heeft geen app, account of e-mailadres nodig — één tik op de NFC-tag
 - Digitale bonnen zijn rechtsgeldig voor de Belastingdienst en als garantiebewijs

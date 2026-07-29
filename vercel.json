@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/pricing-plans/list", "destination": "/prijzen", "permanent": true },
+    { "source": "/blank-3", "destination": "/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

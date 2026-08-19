@@ -1,7 +1,8 @@
 {
   "redirects": [
     { "source": "/pricing-plans/list", "destination": "/prijzen", "permanent": true },
-    { "source": "/blank-3", "destination": "/", "permanent": true }
+    { "source": "/blank-3", "destination": "/", "permanent": true },
+    { "source": "/bonprinter-nodig", "destination": "/bonprinter-vervangen", "permanent": true }
   ],
   "headers": [
     {

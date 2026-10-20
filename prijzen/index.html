@@ -205,6 +205,116 @@
 
     .plan-note { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 12px; text-align: center; }
 
+
+    /* ─── DE BILL-E-UNIT (3D drawing, same as the homepage) ─── */
+    .scene3d { perspective: 1600px; perspective-origin: 50% 20%; }
+    .plane3d { position: relative; transform-style: preserve-3d; transform: rotateX(56deg) rotateZ(26deg); }
+    .unit {
+      --mm: 3px; --t: calc(12 * var(--mm)); --r: calc(5 * var(--mm)); --led: #48D16B;
+      position: relative; width: calc(70 * var(--mm)); height: calc(45 * var(--mm));
+      transform-style: preserve-3d;
+    }
+    .unit-shadow {
+      position: absolute; inset: 0; border-radius: var(--r);
+      background: rgba(14,17,22,0.42); filter: blur(calc(2.6 * var(--mm)));
+      transform: translate(calc(1.5 * var(--mm)), calc(2.5 * var(--mm)));
+    }
+    .unit-l { position: absolute; inset: 0; border-radius: var(--r); transform: translateZ(calc(var(--f) * var(--t))); }
+    .unit-top {
+      position: absolute; inset: 0; border-radius: var(--r); transform: translateZ(var(--t));
+      background: radial-gradient(120% 150% at 70% 15%, #FFFDF8 0%, #F7F2E8 50%, #ECE5D6 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.75), inset 0 0 calc(1.6 * var(--mm)) rgba(120,105,80,0.20);
+    }
+    .unit-mark {
+      position: absolute; right: 9%; top: 50%; transform: translateY(-50%);
+      font-family: 'Newsreader', serif; font-size: calc(10.5 * var(--mm)); letter-spacing: -0.02em; line-height: 1;
+      color: #E8E1D2; text-shadow: 0 -1px 0 rgba(90,75,50,0.38), 0 1px 0 rgba(255,255,255,0.95); white-space: nowrap;
+    }
+    .unit-mark .e { font-style: italic; }
+    .unit-led {
+      position: absolute; left: 47%; top: 26%;
+      width: calc(2.6 * var(--mm)); height: calc(2.6 * var(--mm)); margin: calc(-1.3 * var(--mm));
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, var(--led) 40%, transparent 72%);
+      box-shadow: 0 0 calc(2.5 * var(--mm)) var(--led);
+    }
+    .unit-cable {
+      position: absolute; right: 100%; top: 50%;
+      width: calc(55 * var(--mm)); height: calc(30 * var(--mm)); margin-top: calc(-15 * var(--mm));
+      overflow: visible; transform: translateZ(calc(var(--t) * 0.42));
+    }
+    .unit-cable .c1 { fill: none; stroke: #CFC7B6; stroke-width: 3.6; stroke-linecap: round; }
+    .unit-cable .c2 { fill: none; stroke: #F3EEE3; stroke-width: 2.6; stroke-linecap: round; }
+    .unit-cable .plug { fill: #E2DBCC; stroke: #C4BBA8; stroke-width: 0.5; }
+    .tag3d {
+      position: absolute; left: calc(100% + 17 * var(--mm)); top: 50%;
+      width: calc(30 * var(--mm)); height: calc(30 * var(--mm)); margin-top: calc(-15 * var(--mm));
+      border-radius: 50%; background: var(--ink); color: var(--signal);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(1 * var(--mm));
+      transform: translateZ(1px);
+      box-shadow: 0 calc(0.8 * var(--mm)) calc(2.5 * var(--mm)) rgba(14,17,22,0.35);
+      font-family: 'JetBrains Mono', monospace; font-size: calc(3 * var(--mm)); letter-spacing: 0.16em;
+    }
+    .tag3d svg { width: calc(9 * var(--mm)); height: calc(9 * var(--mm)); }
+    .tag3d b { font-weight: 400; color: var(--bg); }
+    .k-card {
+      position: absolute; left: 50%; top: 50%;
+      width: calc(85.6 * var(--mm)); height: calc(54 * var(--mm));
+      transform: translate(-50%, -50%);
+      border: 1.5px dashed var(--rule-strong); border-radius: calc(3.2 * var(--mm));
+    }
+    .k-card-lbl {
+      position: absolute; top: 100%; left: 0; right: 0; margin-top: calc(1.6 * var(--mm));
+      text-align: center; white-space: nowrap;
+      font-family: 'JetBrains Mono', monospace; font-size: calc(3.5 * var(--mm));
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2);
+    }
+
+    .unit-box {
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      background: var(--paper); border: 1px solid var(--rule); border-radius: 18px;
+      overflow: hidden; margin: 8px 0 20px;
+    }
+    .unit-visual {
+      position: relative; min-height: 330px;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+      background: radial-gradient(circle at 50% 45%, var(--paper) 0%, var(--bg) 80%);
+      border-right: 1px solid var(--rule);
+    }
+    .unit-visual .scene3d { transform: translateX(-30px); }
+    .unit-badge {
+      position: absolute; top: 14px; left: 14px;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-2); background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 999px; padding: 5px 11px;
+    }
+    .unit-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 3px color-mix(in oklab, var(--signal) 40%, transparent); }
+    .unit-facts { margin: 0; padding: 10px 24px; }
+    .unit-facts > div { padding: 13px 0; border-bottom: 1px solid var(--rule); }
+    .unit-facts > div:last-child { border-bottom: none; }
+    .unit-facts dt {
+      font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 3px;
+    }
+    .unit-facts dd { margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink); }
+
+    .year { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 18px; }
+    .year > div { border: 1px solid var(--rule); border-radius: 14px; padding: 16px 18px; background: var(--paper); }
+    .year .k {
+      display: block; font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
+    }
+    .year .v { font-weight: 500; font-size: 26px; letter-spacing: -0.02em; line-height: 1.1; }
+    .year small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+    @media (max-width: 680px) {
+      .unit-box { grid-template-columns: 1fr; }
+      .unit-visual { border-right: none; border-bottom: 1px solid var(--rule); min-height: 260px; }
+      .unit-visual .unit { --mm: 2.3px; }
+      .unit-visual .scene3d { transform: translateX(-24px); }
+      .year { grid-template-columns: 1fr; }
+    }
+
     /* ─── SECTIONS ─── */
     section.block { margin-top: 60px; }
     section.block h2 {
@@ -466,7 +576,6 @@
       <div class="plan primary">
         <div class="plan-head">
           <span class="who">Voor winkels &amp; horeca</span>
-          <span class="pill">Meest gekozen</span>
         </div>
         <h2>Digitale kassabon</h2>
         <div class="price">
@@ -477,7 +586,7 @@
         <ul class="features">
           <li>Onbeperkt digitale bonnen — geen kosten per bon</li>
           <li>Werkt naast je bestaande kassa &amp; printer</li>
-          <li>NFC-tag(s) voor bij de kassa of op tafel</li>
+          <li>NFC-tag voor bij de kassa</li>
           <li>Volledige bon: artikelen, bedragen en btw</li>
           <li>Permanente bon-pagina per aankoop</li>
           <li>Automatisch — je personeel doet niets extra's</li>
@@ -501,8 +610,8 @@
           <li>Volledige bon met alle artikelen en btw</li>
           <li>Bewaar als foto of pdf</li>
           <li>Handig voor garantie, retour en de Belastingdienst</li>
-          <li class="off">Automatisch overzicht &amp; btw-export — binnenkort</li>
-          <li class="off">Koppeling met je boekhouding — binnenkort</li>
+          <li class="off">Al je bonnen bij elkaar in de Bill-e app — binnenkort</li>
+          <li class="off">Premium: btw-overzicht, export en boekhoudkoppeling — binnenkort</li>
         </ul>
         <a href="/digitale-kassabon" class="btn ghost">Zo werkt het →</a>
         <div class="plan-note">Voor consumenten en zzp'ers</div>
@@ -515,6 +624,49 @@
       horecazaken. Elke kassa krijgt een eigen Bill-e-unit; neem contact op
       voor de actuele voorwaarden.
     </p>
+
+    <!-- ─── DE BILL-E-UNIT ─── -->
+    <section class="block" id="de-unit">
+      <h2>Wat je krijgt voor <em>€89</em></h2>
+      <p>
+        Eén keer betalen, daarna is het van jou: de Bill-e-unit en een
+        NFC-tag voor op de toonbank. Het kastje komt náást je kassa.
+        <strong>Je bonprinter blijft gewoon staan</strong> en print door zoals altijd.
+      </p>
+
+      <div class="unit-box">
+        <div class="unit-visual" role="img" aria-label="Tekening van de Bill-e-unit: een plat, gebroken wit kastje van 7 bij 4,5 centimeter, kleiner dan een bankpas, met een USB-C-kabel en een losse zwarte NFC-tag ernaast">
+          <span class="unit-badge"><span class="dot"></span>Eerste serie · nov. 2026</span>
+          <div class="scene3d">
+            <div class="plane3d">
+              <div class="unit">
+                <span class="k-card"><span class="k-card-lbl">Bankpas · 8,6 × 5,4 cm</span></span>
+                <span class="unit-shadow"></span>
+                <svg class="unit-cable" viewBox="0 0 55 30" preserveAspectRatio="none" aria-hidden="true"><path class="c1" d="M55 15 H46 C34 15 26 27 0 28"/><path class="c2" d="M55 15 H46 C34 15 26 27 0 28"/><rect class="plug" x="45" y="11.5" width="10" height="7" rx="1.6"/></svg>
+                <span class="unit-top"><span class="unit-led"></span><span class="unit-mark">Bill-<span class="e">e</span></span></span>
+                <span class="tag3d" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8.6 9.2a4 4 0 0 1 0 5.6"/><path d="M11.4 6.8a7.5 7.5 0 0 1 0 10.4"/><path d="M14.2 4.4a11 11 0 0 1 0 15.2"/></svg>
+                  <b>TIK</b>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <dl class="unit-facts">
+          <div><dt>De Bill-e-unit</dt><dd>7 × 4,5 × 1,2 cm, kleiner dan een bankpas. Stroom via één USB-C-kabel, de rest via je WiFi.</dd></div>
+          <div><dt>De NFC-tag</dt><dd>Losse sticker voor op de toonbank. Je klant tikt en heeft de bon.</dd></div>
+          <div><dt>Je bonprinter</dt><dd>Blijft staan. Je kassa krijgt er alleen een printer bij: Bill-e.</dd></div>
+          <div><dt>Internet weg?</dt><dd>Het kastje bewaart de bonnen en stuurt ze door zodra het weer kan.</dd></div>
+        </dl>
+      </div>
+
+      <div class="year">
+        <div><span class="k">Eenmalig</span><span class="v">€89</span><small>Bill-e-unit + NFC-tag</small></div>
+        <div><span class="k">Eerste jaar</span><span class="v">€329</span><small>€89 + 12 × €20, per kassa</small></div>
+        <div><span class="k">Daarna</span><span class="v">€240 / jaar</span><small>12 × €20, per kassa</small></div>
+      </div>
+      <p><a href="/#het-kastje">Meer over het kastje en hoe je hem aansluit →</a></p>
+    </section>
 
     <!-- ─── SAVINGS / CALCULATOR ─── -->
     <section class="block" id="rekenhulp">
@@ -581,8 +733,8 @@
             <ul class="calc-stats">
               <li>Onbeperkt digitale bonnen — <b>hetzelfde bedrag</b> bij elke drukte</li>
               <li>Elke bon blijft bij je klant, mét artikelen en btw</li>
-              <li>Geen opslag en geen printerstoringen meer</li>
-              <li>Niemand hoeft nog bonrollen te vervangen of bij te bestellen</li>
+              <li>Ook de klant die het papiertje laat liggen, heeft z'n bon</li>
+              <li>Geen e-mailadressen vragen en geen bonnen nasturen</li>
             </ul>
           </div>
         </div>
@@ -591,7 +743,7 @@
           * Schatting op basis van ~90% weggegooide kassabonnen in Nederland.
           Papierkosten zijn een indicatie op basis van je eigen invoer; de
           Bill-e-unit is een eenmalige aanschaf (€89 per kassa). Bill-e werkt náást je
-          papieren bon — je bepaalt zelf hoe snel je minder print. Meer hierover
+          papieren bon: je bonprinter blijft gewoon staan. Meer hierover
           in <a href="/bonprinter-vervangen">wat een bonprinter echt kost</a>
         </p>
       </div>
@@ -612,8 +764,8 @@
           </thead>
           <tbody>
             <tr><td>Digitale bonnen</td><td>Onbeperkt — geen limiet, geen kosten per bon</td></tr>
-            <tr><td>NFC-tag(s)</td><td>Voor bij de kassa; extra tags voor tafels of balies op aanvraag</td></tr>
-            <tr><td>Koppeling met je kassa</td><td>Als extra netwerkprinter — je kassa en software blijven ongewijzigd</td></tr>
+            <tr><td>NFC-tag</td><td>Voor bij de kassa. Tafeltags voor horeca staan gepland</td></tr>
+            <tr><td>Koppeling met je kassa</td><td>Als extra netwerkprinter — je kassa, software en bonprinter blijven zoals ze zijn</td></tr>
             <tr><td>Bon-pagina</td><td>Permanente webpagina per aankoop, direct op de telefoon van de klant</td></tr>
             <tr><td>Support &amp; updates</td><td>Persoonlijke hulp bij het instellen en doorlopende updates</td></tr>
             <tr><td>De Bill-e-unit</td><td>Eenmalige aanschaf — €89 per kassa</td></tr>
@@ -721,6 +873,26 @@
       }
       ids.forEach(function (id) { el[id].addEventListener('input', update); });
       update();
+    })();
+  </script>
+
+  <!-- ─── 3D Bill-e-unit: stack the side layers (same as the homepage) ─── -->
+  <script>
+    (function () {
+      document.querySelectorAll('.unit').forEach(function (unit) {
+        var mm = parseFloat(getComputedStyle(unit).getPropertyValue('--mm')) || 3;
+        var n = Math.max(10, Math.round((12 * mm) / 1.3));
+        var top = unit.querySelector('.unit-top');
+        for (var i = 0; i < n; i++) {
+          var f = i / n;
+          var layer = document.createElement('i');
+          layer.className = 'unit-l';
+          layer.style.setProperty('--f', f.toFixed(3));
+          var seam = Math.abs(f - 0.47) < 0.5 / n;
+          layer.style.background = seam ? 'hsl(40 12% 66%)' : 'hsl(40 20% ' + (72 + f * 14).toFixed(1) + '%)';
+          unit.insertBefore(layer, top);
+        }
+      });
     })();
   </script>
 

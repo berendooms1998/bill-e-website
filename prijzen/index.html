@@ -270,6 +270,10 @@
       letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2);
     }
 
+    /* Safari doesn't clip 3D-transformed children with overflow:hidden alone;
+       a mask forces the clip so the box never pokes out over nearby text. */
+    .clip3d { isolation: isolate; -webkit-mask-image: -webkit-radial-gradient(white, black); }
+
     .unit-box {
       display: grid; grid-template-columns: 1.1fr 0.9fr;
       background: var(--paper); border: 1px solid var(--rule); border-radius: 18px;
@@ -282,6 +286,7 @@
       border-right: 1px solid var(--rule);
     }
     .unit-visual .scene3d { transform: translateX(-30px); }
+    .unit-visual .unit { --mm: clamp(2.3px, 0.35vw, 3px); }
     .unit-badge {
       position: absolute; top: 14px; left: 14px;
       display: inline-flex; align-items: center; gap: 8px;
@@ -634,8 +639,8 @@
         <strong>Je bonprinter blijft gewoon staan</strong> en print door zoals altijd.
       </p>
 
-      <div class="unit-box">
-        <div class="unit-visual" role="img" aria-label="Tekening van de Bill-e-unit: een plat, gebroken wit kastje van 7 bij 4,5 centimeter, kleiner dan een bankpas, met een USB-C-kabel en een losse zwarte NFC-tag ernaast">
+      <div class="unit-box clip3d">
+        <div class="unit-visual clip3d" role="img" aria-label="Tekening van de Bill-e-unit: een plat, gebroken wit kastje van 7 bij 4,5 centimeter, kleiner dan een bankpas, met een USB-C-kabel en een losse zwarte NFC-tag ernaast">
           <span class="unit-badge"><span class="dot"></span>Eerste serie · nov. 2026</span>
           <div class="scene3d">
             <div class="plane3d">

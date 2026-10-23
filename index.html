@@ -1177,14 +1177,17 @@
     }
 
     /* ─────────────── HERO UNIT ─────────────── */
+    .receipt-stage { flex-direction: column; align-items: center; }
     .hero-unit {
-      position: absolute;
-      z-index: 2;
-      left: -70px;
-      bottom: -64px;
+      position: relative;
+      margin: 18px 90px 0 0;
       pointer-events: none;
     }
     .hero-unit .unit { --mm: 2.5px; }
+    /* Safari doesn't clip 3D-transformed children with overflow:hidden alone;
+       a mask forces the clip so the box never pokes out over nearby text. */
+    .clip3d { isolation: isolate; -webkit-mask-image: -webkit-radial-gradient(white, black); }
+
 
     /* ─────────────── DEMO ─────────────── */
     .hidden { display: none !important; }
@@ -1462,6 +1465,7 @@
       padding: 0 30px 0 70px;
     }
     .dm-unit .unit { --mm: 2.2px; }
+    .dm-unit .unit-cable { display: none; }   /* would cross the WiFi line to the till */
     .dm[data-state="tap"] .tag3d { cursor: pointer; }
     .dm[data-state="tap"] .tag3d::after { animation: tagping 1.5s ease-out infinite; }
     .tag3d.hit::after { animation: taghit .6s ease-out; }
@@ -1679,7 +1683,7 @@
       background: radial-gradient(circle at 50% 42%, var(--paper) 0%, var(--bg) 75%);
     }
     .k-visual .scene3d { transform: translateX(-34px); }
-    .k-visual .unit { --mm: 4.1px; }
+    .k-visual .unit { --mm: clamp(2.3px, 0.32vw, 4.1px); }
     .k-visual .tag3d { left: calc(100% + 17 * var(--mm)); }
     .k-card {
       position: absolute;
@@ -2008,8 +2012,7 @@
       .m-cta { flex-direction: column; align-items: flex-start; gap: 22px; }
       .about-grid { grid-template-columns: 1fr; gap: 44px; }
 
-      .receipt-stage { flex-direction: column; align-items: center; }
-      .hero-unit { position: relative; left: auto; bottom: auto; margin: -22px 70px 0 0; }
+      .hero-unit { margin: 14px 70px 0 0; }
       .hero-unit .unit { --mm: 2.1px; }
 
       .dm-bar { padding: 12px 16px; }
@@ -2423,7 +2426,7 @@
       </p>
     </div>
 
-    <div class="dm reveal" id="dm" data-state="order">
+    <div class="dm clip3d reveal" id="dm" data-state="order">
       <div class="dm-bar">
         <ol class="dm-steps" id="dm-steps">
           <li data-s="order" class="on"><span>1</span>Bestel</li>
@@ -2576,7 +2579,7 @@
     </div>
 
     <div class="k-grid">
-      <div class="k-visual reveal" role="img" aria-label="Tekening van de Bill-e-unit: een plat, gebroken wit kastje van 7 bij 4,5 centimeter met het Bill-e logo, een statuslampje, een USB-C-kabel en een losse zwarte NFC-tag ernaast">
+      <div class="k-visual clip3d reveal" role="img" aria-label="Tekening van de Bill-e-unit: een plat, gebroken wit kastje van 7 bij 4,5 centimeter met het Bill-e logo, een statuslampje, een USB-C-kabel en een losse zwarte NFC-tag ernaast">
         <span class="k-badge"><span class="d"></span>Eerste serie · levering nov. 2026</span>
         <div class="scene3d">
           <div class="plane3d">
@@ -3386,7 +3389,7 @@
         const cb = box(cloud);
         $('w-up').setAttribute('d', link(bu, cb));
         $('w-down').setAttribute('d', link(cb, ph));
-        [['lbl-print', 'w-print', 0.5], ['lbl-wifi', 'w-wifi', 0.62]].forEach(([lbl, w, at]) => {
+        [['lbl-print', 'w-print', 0.5], ['lbl-wifi', 'w-wifi', 0.5]].forEach(([lbl, w, at]) => {
           const m = pointOn($(w), at);
           $(lbl).style.left = m.x + 'px';
           $(lbl).style.top = m.y + 'px';

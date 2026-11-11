@@ -1,8 +1,8 @@
 # Bill-e
 
-> Bill-e is een Nederlands bedrijf (Apeldoorn) dat digitale kassabonnen levert voor winkels en horeca. De bon wordt op het moment van afdrukken bij de kassa automatisch digitaal vastgelegd — zonder nieuwe kassa of kassasoftware voor de winkel, en zonder app, account of e-mailadres voor de klant: die tikt met de telefoon op een NFC-tag bij de kassa en heeft direct de volledige bon (artikelen, bedragen, BTW) via een permanente link. Live sinds 2026 bij de eerste partner in Otterlo.
+> Bill-e is een Nederlands bedrijf (Apeldoorn) dat digitale kassabonnen levert voor winkels en horeca. De bon wordt op het moment van afdrukken bij de kassa automatisch digitaal vastgelegd — zonder nieuwe kassa of kassasoftware voor de winkel, en zonder app, account of e-mailadres voor de klant: die tikt met de telefoon op een NFC-tag bij de kassa en heeft direct de volledige bon (artikelen, bedragen, BTW) via een permanente link. De Bill-e-unit neemt de plek van de bonprinter in, dus bonprinter en bonrollen kunnen weg; wie papier erbij wil houden, zet de unit naast de printer. Live sinds 2026 bij de eerste partner in Otterlo.
 
-Bill-e is a Dutch startup providing digital receipts for shops and hospitality venues. Receipts are captured automatically at the point of sale (no POS replacement needed); customers tap an NFC tag to open their full itemised receipt in the browser — no app, no account, no e-mail address.
+Bill-e is a Dutch startup providing digital receipts for shops and hospitality venues. Receipts are captured automatically at the point of sale (no POS replacement needed); the Bill-e unit takes the receipt printer's place, so the printer and paper rolls can go (or it runs alongside the printer for shops that want paper); customers tap an NFC tag to open their full itemised receipt in the browser — no app, no account, no e-mail address.
 
 ## Belangrijkste pagina's
 

@@ -300,12 +300,12 @@
           {
             "@type": "Question",
             "name": "Moet ik mijn kassa of kassasoftware vervangen voor Bill-e?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Nee. Bill-e komt bij je op het netwerk als een extra bonprinter. Je kassa en je kassasoftware blijven precies zoals ze zijn — bij de meeste systemen voeg je Bill-e toe als tweede printer, wat een instelling is en geen nieuwe installatie." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Nee. Bill-e komt bij je op het netwerk als bonprinter. Je kassa en je kassasoftware blijven precies zoals ze zijn — bij de meeste systemen zet je de printer om naar Bill-e (of voeg je Bill-e toe als tweede printer), wat een instelling is en geen nieuwe installatie." }
           },
           {
             "@type": "Question",
             "name": "Werkt Bill-e met mijn merk bonprinter (Epson, Star)?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Het gaat niet om je printermerk. Bill-e koppelt aan je kassa, niet aan je fysieke printer; die blijft gewoon werken. Zolang je kassa naar een bonprinter op het netwerk kan printen (poort 9100 / ESC-POS), werkt Bill-e — ongeacht of je een Epson, Star of ander merk hebt." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Het gaat niet om je printermerk. Bill-e koppelt aan je kassa, niet aan je fysieke printer; die heb je voor de klantbon niet meer nodig. Zolang je kassa naar een bonprinter op het netwerk kan printen (poort 9100 / ESC-POS), werkt Bill-e — ongeacht of je een Epson, Star of ander merk hebt." }
           },
           {
             "@type": "Question",
@@ -315,7 +315,7 @@
           {
             "@type": "Question",
             "name": "Kan ik mijn bonprinter dan helemaal weggooien?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Meestal nog niet. De bonprinter stuurt vaak ook de kassalade aan (via een RJ12-kabel) of print werkbonnen voor de keuken en bar. Voor de bon die de klant meekrijgt heb je hem met Bill-e niet meer nodig; voor de lade en interne bonnen vaak nog wel. Je print dus minder, niet per se niets." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Voor de klantbon wel: die maakt Bill-e digitaal, dus bij je kassa heb je geen bonprinter meer nodig. Stuurt je printer ook de kassalade aan (via een RJ12-kabel) of print hij werkbonnen voor keuken en bar, dan kijken we samen wat daarvoor blijft." }
           },
           {
             "@type": "Question",
@@ -402,15 +402,16 @@
         <span class="k">Het korte antwoord</span>
         <p>
           <strong>De bon die je klant meekrijgt kun je vandaag al digitaal
-          maken</strong> — daar heb je geen papier meer voor nodig. De printer
-          zelf blijft vaak nog even staan voor de <strong>kassalade</strong> of
-          voor <strong>werkbonnen</strong> in de keuken — als je die hebt.
+          maken</strong>, en daarmee kan de bonprinter bij je kassa weg. Bill-e
+          neemt zijn plek in. Opent je <strong>kassalade</strong> via de printer,
+          of print je <strong>werkbonnen</strong> voor de keuken? Dan kijken we
+          samen wat daarvoor nodig blijft.
         </p>
         <p>
           Bill-e werkt met vrijwel elke kassa die naar een
-          <strong>bonprinter op het netwerk</strong> print: Bill-e komt er
-          simpelweg als een extra printer bij. Je vervangt dus niets aan je
-          kassa — je voegt een digitale bon toe.
+          <strong>bonprinter op het netwerk</strong> print: Bill-e neemt
+          simpelweg de plek van die printer in. Je vervangt dus niets aan je
+          kassa, alleen het papier.
         </p>
         <p>
           De winst zit niet alleen in de printer van
@@ -441,9 +442,9 @@
         </li>
       </ul>
       <p>
-        Kortom: de <em>klantbon</em> vervang je meteen; de <em>printer</em> blijft
-        vaak nog even nodig voor lade en keuken. Je print dus minder, niet
-        per se niets.
+        Kortom: de <em>klantbon</em> vervang je meteen, en daarmee de bonprinter
+        bij je kassa. Alleen voor een lade of een keuken kan er nog iets nodig
+        zijn.
       </p>
 
       <h2>Wat kost een bonprinter <em>écht</em>?</h2>
@@ -503,9 +504,9 @@
         </li>
       </ul>
       <p>
-        Kortom: de printer heeft in veel zaken nog een rol. Maar die rol is
-        steeds vaker <em>intern</em> (lade, keuken) — niet de bon die je aan de
-        klant meegeeft. Overweeg je juist een nieuwe printer aan te schaffen,
+        Kortom: heeft de printer nog een rol, dan is die steeds vaker
+        <em>intern</em> (lade, keuken) — niet de bon die je aan de klant
+        meegeeft. Overweeg je juist een nieuwe printer aan te schaffen,
         dan is dit het moment om je af te vragen of je die voor de klantbon nog
         nodig hebt. Hoe de regels rond het geven van een bon precies zitten,
         lees je in <a href="/kassabon-verplicht">is een kassabon verplicht?</a>
@@ -514,8 +515,8 @@
       <h2>Werkt Bill-e met <em>mijn</em> kassa?</h2>
       <p>
         Bill-e vervangt je kassa of kassasoftware niet. Het komt bij je op het
-        netwerk als een extra bonprinter: je kassa &ldquo;print&rdquo; de bon
-        (ook) naar Bill-e, en die legt hem digitaal vast. Of dat werkt hangt af
+        netwerk als bonprinter: je kassa &ldquo;print&rdquo; de bon naar
+        Bill-e, en die legt hem digitaal vast. Of dat werkt hangt af
         van <strong>hoe jouw kassa met de printer praat</strong> — niet van je
         printermerk. Dit is de stand van zaken:
       </p>
@@ -556,21 +557,22 @@
 
       <h3>Hoe de koppeling werkt</h3>
       <p>
-        Bij een netwerk-opstelling voeg je Bill-e toe als een tweede
-        bonprinter met een eigen IP-adres. Je kassa stuurt de bon ernaartoe
-        zoals naar elke andere printer; Bill-e leest de artikelen, bedragen en
+        Bij een netwerk-opstelling laat je je kassa naar Bill-e printen in
+        plaats van naar je bonprinter; Bill-e heeft een eigen adres op het
+        netwerk. Je kassa stuurt de bon ernaartoe zoals naar elke andere printer; Bill-e leest de artikelen, bedragen en
         btw uit en zet ze klaar op een <a href="/digitale-kassabon">permanente
-        webpagina</a>. Je bestaande printer blijft ondertussen gewoon
-        aangesloten — je hoeft niets los te koppelen om te beginnen.
+        webpagina</a>. Wil je papier erbij houden, of eerst een tijdje
+        beide laten draaien? Dan voeg je Bill-e toe als tweede printer en blijft
+        je bestaande printer gewoon aangesloten.
       </p>
 
       <div class="callout">
         <span class="tag"><span class="dot"></span>Zo helpt Bill-e</span>
         <h3>Digitale bon, zonder je kassa te vervangen</h3>
         <p>
-          Bill-e werkt naast je bestaande kassa en printer: er verandert niets
-          aan je afrekenproces, maar elke bon staat direct digitaal klaar voor
-          je klant — met één tap op de NFC-tag. Twijfel je of het met jouw
+          Bill-e werkt met je bestaande kassa: er verandert niets aan je
+          afrekenproces, maar elke bon staat direct digitaal klaar voor je
+          klant — met één tap op de NFC-tag. Je bonprinter mag weg. Twijfel je of het met jouw
           systeem werkt? We kijken het graag met je na. Benieuwd wat het kost?
           Bekijk de <a href="/prijzen">prijzen</a>. We zoeken pilotlocaties
           in winkels en horeca.
@@ -582,11 +584,11 @@
       <div class="faq-section">
         <details class="faq-item">
           <summary>Moet ik mijn kassa of kassasoftware vervangen voor Bill-e?</summary>
-          <p>Nee. Bill-e komt bij je op het netwerk als een extra bonprinter. Je kassa en je kassasoftware blijven precies zoals ze zijn — bij de meeste systemen voeg je Bill-e toe als tweede printer, wat een instelling is en geen nieuwe installatie.</p>
+          <p>Nee. Bill-e komt bij je op het netwerk als bonprinter. Je kassa en je kassasoftware blijven precies zoals ze zijn — bij de meeste systemen zet je de printer om naar Bill-e (of voeg je Bill-e toe als tweede printer), wat een instelling is en geen nieuwe installatie.</p>
         </details>
         <details class="faq-item">
           <summary>Werkt Bill-e met mijn merk bonprinter (Epson, Star)?</summary>
-          <p>Het gaat niet om je printermerk. Bill-e koppelt aan je kassa, niet aan je fysieke printer; die blijft gewoon werken. Zolang je kassa naar een bonprinter op het netwerk kan printen (poort 9100 / ESC-POS), werkt Bill-e — ongeacht of je een Epson, Star of ander merk hebt.</p>
+          <p>Het gaat niet om je printermerk. Bill-e koppelt aan je kassa, niet aan je fysieke printer; die heb je voor de klantbon niet meer nodig. Zolang je kassa naar een bonprinter op het netwerk kan printen (poort 9100 / ESC-POS), werkt Bill-e — ongeacht of je een Epson, Star of ander merk hebt.</p>
         </details>
         <details class="faq-item">
           <summary>Werkt Bill-e met Lightspeed, Square of SumUp?</summary>
@@ -594,7 +596,7 @@
         </details>
         <details class="faq-item">
           <summary>Kan ik mijn bonprinter dan helemaal weggooien?</summary>
-          <p>Meestal nog niet. De bonprinter stuurt vaak ook de kassalade aan (via een RJ12-kabel) of print werkbonnen voor de keuken en bar. Voor de bon die de klant meekrijgt heb je hem met Bill-e niet meer nodig; voor de lade en interne bonnen vaak nog wel. Je print dus minder, niet per se niets.</p>
+          <p>Voor de klantbon wel: die maakt Bill-e digitaal, dus bij je kassa heb je geen bonprinter meer nodig. Stuurt je printer ook de kassalade aan (via een RJ12-kabel) of print hij werkbonnen voor keuken en bar, dan kijken we samen wat daarvoor blijft.</p>
         </details>
         <details class="faq-item">
           <summary>Is een bonprinter wettelijk verplicht?</summary>

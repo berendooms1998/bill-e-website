@@ -1314,6 +1314,10 @@
     .dm-node-label em { font-style: normal; color: var(--accent); }
     .dm-pos     { grid-area: pos; }
     .dm-printer { grid-area: printer; }
+    .dm-printer .printer { transition: opacity .35s, filter .35s; }
+    .dm[data-paper="off"] .dm-printer .printer { opacity: .28; filter: grayscale(1); }
+    .dm[data-paper="off"] .dm-wires .w-print { stroke: var(--rule-strong); stroke-dasharray: 2 4; }
+    .dm-link[aria-pressed="true"] { border-color: var(--ink); }
     .dm-unit    { grid-area: unit; }
     .dm-phone   { grid-area: phone; }
     .dm-printer .dm-node-label, .dm-unit .dm-node-label { text-align: center; margin: 14px 0 0; }
@@ -2223,7 +2227,7 @@
             "name": "Hoe digitaliseer ik als ondernemer mijn kassabonnen?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Met Bill-e hoef je je huidige systemen daarvoor vrijwel niet aan te passen. Je kassa, printer en afrekenproces blijven precies zoals ze zijn — Bill-e legt de bon vast op het moment van afdrukken en maakt er automatisch een digitale versie van. Geen nieuwe kassasoftware, geen extra handelingen voor je personeel, en je klant opent de bon zonder app."
+              "text": "Met Bill-e hoef je je huidige systemen daarvoor vrijwel niet aan te passen. Je kassa en afrekenproces blijven precies zoals ze zijn: je kassa print naar Bill-e in plaats van naar je bonprinter, en Bill-e maakt van elke bon automatisch een digitale versie. Geen nieuwe kassasoftware, geen extra handelingen voor je personeel, en je klant opent de bon zonder app."
             }
           },
           {
@@ -2231,18 +2235,18 @@
             "name": "Werkt Bill-e met mijn kassasysteem?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Meestal wel, en je hoeft je kassa of kassasoftware er niet voor te vervangen. Bill-e komt bij je op het netwerk als een extra bonprinter. Kassa's die naar een bonprinter op het netwerk printen (veel systemen in horeca en retail, zoals unTill, MplusKASSA of Vectron) werken nu al; voor iPad- en cloudkassa's zoals Lightspeed, Square en SumUp is ondersteuning in ontwikkeling."
+              "text": "Meestal wel, en je hoeft je kassa of kassasoftware er niet voor te vervangen. Bill-e komt bij je op het netwerk als bonprinter. Kassa's die naar een bonprinter op het netwerk printen (veel systemen in horeca en retail, zoals unTill, MplusKASSA of Vectron) werken nu al; voor iPad- en cloudkassa's zoals Lightspeed, Square en SumUp is ondersteuning in ontwikkeling."
             }
           },
           {
             "@type": "Question",
-            "name": "Moet ik mijn bonprinter loskoppelen voor Bill-e?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Nee. In de standaardopstelling komt Bill-e náást je bonprinter: je kassa krijgt er één extra printer bij, en dat is Bill-e. Je eigen bonprinter blijft aangesloten en print gewoon door, ook als Bill-e een keer uitvalt. Je klant kan dus altijd nog een papieren bon krijgen." }
+            "name": "Kan ik mijn bonprinter wegdoen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ja, dat is precies het idee. Bill-e neemt de plek van je bonprinter in: je kassa print naar Bill-e en je klant krijgt de bon op z'n telefoon. Geen papier en geen bonrollen meer. Wil je toch papier erbij houden, of eerst een tijdje beide laten draaien? Dan zet je Bill-e náást je bonprinter." }
           },
           {
             "@type": "Question",
             "name": "Wat gebeurt er als het internet even wegvalt?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Dan raak je geen bon kwijt. De Bill-e-unit bewaart de bonnen en stuurt ze door zodra de verbinding terug is. Je papieren bon werkt intussen gewoon door." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Dan raak je geen bon kwijt. De Bill-e-unit bewaart elke bon en stuurt hem door zodra de verbinding terug is. Wil je klant de bon dan nog? Je zet hem vanuit je beheerpagina terug op de tag." }
           },
           {
             "@type": "Question",
@@ -2318,10 +2322,10 @@
           </span>
         </h1>
         <p class="hero-sub">
-          Een klein Bill-e-kastje naast je kassa maakt van elke bon een
-          digitale kassabon. Je kassa en je bonprinter blijven precies zoals
-          ze zijn. Je klant tikt met z'n telefoon op de tag en heeft de bon,
-          zonder app.
+          Een klein Bill-e-kastje bij je kassa maakt van elke bon een
+          digitale kassabon. Je kassa blijft precies zoals hij is, je
+          bonprinter en bonrollen kunnen weg. Je klant tikt met z'n telefoon
+          op de tag en heeft de bon, zonder app.
         </p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">Word pilotpartner →</a>
@@ -2381,7 +2385,7 @@
         </div>
         <div>
           <span class="k">Je bonprinter</span>
-          <span class="v">Blijft staan</span>
+          <span class="v">Mag weg</span>
         </div>
         <div>
           <span class="k">Je klant</span>
@@ -2421,12 +2425,13 @@
       </div>
       <p class="section-desc reveal">
         Sta even zelf achter de kassa. Bestel iets, reken af en tik de tag.
-        Je ziet precies wat er gebeurt: je eigen bonprinter print gewoon door,
-        en je klant heeft dezelfde bon meteen op z'n telefoon.
+        Je kassa print naar Bill-e in plaats van naar papier, en je klant
+        heeft de bon meteen op z'n telefoon. Wil je toch papier erbij? Zet
+        de bonprinter erbij en kijk hoe dat gaat.
       </p>
     </div>
 
-    <div class="dm clip3d reveal" id="dm" data-state="order">
+    <div class="dm clip3d reveal" id="dm" data-state="order" data-paper="off">
       <div class="dm-bar">
         <ol class="dm-steps" id="dm-steps">
           <li data-s="order" class="on"><span>1</span>Bestel</li>
@@ -2434,6 +2439,7 @@
           <li data-s="tap"><span>3</span>Tik de tag</li>
         </ol>
         <div class="dm-actions">
+          <button class="dm-link" id="dm-paper" type="button" aria-pressed="false">+ Bonprinter erbij</button>
           <button class="dm-link" id="dm-auto" type="button">▶ Speel automatisch af</button>
           <button class="dm-link hidden" id="dm-reset" type="button">↺ Opnieuw</button>
         </div>
@@ -2446,8 +2452,8 @@
           <path id="w-up" class="w-cloud" />
           <path id="w-down" class="w-cloud" />
         </svg>
-        <span class="dm-wire-lbl" id="lbl-print">zoals altijd</span>
-        <span class="dm-wire-lbl" id="lbl-wifi">WiFi · extra printer</span>
+        <span class="dm-wire-lbl" id="lbl-print">uit</span>
+        <span class="dm-wire-lbl" id="lbl-wifi">WiFi · als printer</span>
         <span class="dm-cloud" id="dm-cloud" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .6-7.96A6 6 0 0 0 6.1 9.5 4.25 4.25 0 0 0 7 18z"/></svg>
           Bill-e
@@ -2477,7 +2483,7 @@
               <span class="printer-led"></span>
             </div>
           </div>
-          <div class="dm-node-label">Je eigen bonprinter <em>· blijft</em></div>
+          <div class="dm-node-label" id="dm-printer-lbl">Bonprinter <em>· niet nodig</em></div>
         </div>
 
         <!-- the Bill-e unit + tag -->
@@ -2495,7 +2501,7 @@
               </div>
             </div>
           </div>
-          <div class="dm-node-label">Bill-e-unit <em>· erbij</em></div>
+          <div class="dm-node-label">Bill-e-unit <em>· in plaats van papier</em></div>
         </div>
 
         <!-- the customer's phone -->
@@ -2572,7 +2578,7 @@
       </div>
       <p class="section-desc reveal">
         Een kastje kleiner dan een bankpas en een tag voor op de toonbank.
-        Meer is het niet. Het kastje meldt zich bij je kassa als extra
+        Meer is het niet. Het kastje meldt zich bij je kassa als
         bonprinter en stuurt elke bon via WiFi door. Je klant tikt de tag
         en heeft z'n bon.
       </p>
@@ -2618,7 +2624,7 @@
       <li><b>Stekker erin</b><p>Het lampje knippert: het kastje is klaar om in te stellen.</p></li>
       <li><b>Kies je WiFi</b><p>Met je telefoon, via het netwerk ‘Bill-e Setup’. Geen app nodig.</p></li>
       <li><b>Tik de tag aan</b><p>Vul de naam en het adres van je zaak in. Het kastje is meteen van jou.</p></li>
-      <li><b>Kassa instellen</b><p>Voeg Bill-e toe als extra bonprinter. Wij helpen je daar gewoon bij.</p></li>
+      <li><b>Kassa instellen</b><p>Laat je kassa naar Bill-e printen in plaats van naar papier. Wij helpen je daar gewoon bij.</p></li>
       <li><b>Testbon</b><p>Reken één keer af. Zie je ‘Je bent live!’? Dan ben je klaar.</p></li>
     </ol>
   </section>
@@ -2628,24 +2634,54 @@
     <div class="section-head">
       <div>
         <div class="section-label reveal">Hoe het werkt</div>
-        <h2 class="section-title reveal">Je bonprinter<br><em>blijft gewoon staan.</em></h2>
+        <h2 class="section-title reveal">Je bonprinter<br><em>mag weg.</em></h2>
       </div>
       <p class="section-desc reveal">
-        Bill-e haalt niets weg en je koppelt niets los. Standaard komt het
-        kastje náást je bonprinter: je kassa print voortaan naar twee
-        printers tegelijk. Kan jouw kassa dat niet, dan zijn er andere
-        opstellingen.
+        Bill-e neemt de plek van je bonprinter in. Je kassa print naar het
+        kastje en elke bon is digitaal: geen papier, geen bonrollen, geen
+        printer die vastloopt. Wil je papier erbij houden, of eerst rustig
+        beginnen? Dan zet je Bill-e náást je bonprinter.
       </p>
     </div>
 
     <div class="w-tabs reveal" role="tablist" aria-label="Opstellingen">
-      <button class="w-tab" role="tab" id="wt-naast" aria-controls="wp-naast" aria-selected="true" type="button">Naast je printer <span class="pill live"><span class="d"></span>Live</span></button>
+      <button class="w-tab" role="tab" id="wt-zonder" aria-controls="wp-zonder" aria-selected="true" type="button">Zonder papier <span class="pill live"><span class="d"></span>Standaard</span></button>
+      <button class="w-tab" role="tab" id="wt-naast" aria-controls="wp-naast" aria-selected="false" tabindex="-1" type="button">Naast je printer <span class="pill future">Optie</span></button>
       <button class="w-tab" role="tab" id="wt-tussen" aria-controls="wp-tussen" aria-selected="false" tabindex="-1" type="button">Tussen kassa en printer <span class="pill soon">In ontwikkeling</span></button>
-      <button class="w-tab" role="tab" id="wt-zonder" aria-controls="wp-zonder" aria-selected="false" tabindex="-1" type="button">Zonder papier <span class="pill future">Later</span></button>
     </div>
 
-    <!-- 1 · next to the printer -->
-    <div class="w-panel reveal" role="tabpanel" id="wp-naast" aria-labelledby="wt-naast">
+    <!-- 1 · no paper: the standard -->
+    <div class="w-panel reveal" role="tabpanel" id="wp-zonder" aria-labelledby="wt-zonder">
+      <div class="w-diagram">
+        <div class="flow" aria-hidden="true">
+          <div class="flow-col"><div class="fn"><b>Kassa</b><small>zoals altijd</small></div></div>
+          <div class="flow-wire"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path class="wifi" d="M0 50 C50 50 50 25 100 25"/><path class="off" d="M0 50 C50 50 50 75 100 75"/></svg></div>
+          <div class="flow-col two">
+            <div class="fn bille"><b>Bill-e</b><small>in plaats van papier</small></div>
+            <div class="fn gone"><b>Bonrollen</b><small>niet meer nodig</small></div>
+          </div>
+          <div class="flow-wire"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path class="wifi" d="M0 25 H100"/></svg></div>
+          <div class="flow-col two">
+            <div class="fn"><b>Telefoon</b><small>digitale bon</small></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-info">
+        <span class="pill live"><span class="d"></span>De standaard</span>
+        <h3>Zonder papier</h3>
+        <p>Bill-e neemt de plek van de bonprinter in. Je kassa print naar Bill-e,
+          zoals hij eerst naar papier printte, en elke bon is alleen nog digitaal.
+          Je klant tikt de tag en heeft de bon.</p>
+        <dl>
+          <div><dt>Je bonprinter</dt><dd>Niet meer nodig. Geen bonrollen, geen papier.</dd></div>
+          <div><dt>Je kassa</dt><dd>Print naar Bill-e in plaats van naar papier. Eenmalig ingesteld, wij helpen.</dd></div>
+          <div><dt>Tik gemist?</dt><dd>Zet de bon met één tik terug op de tag, vanuit je beheerpagina.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <!-- 2 · option: next to the printer -->
+    <div class="w-panel hidden" role="tabpanel" id="wp-naast" aria-labelledby="wt-naast">
       <div class="w-diagram">
         <div class="flow" aria-hidden="true">
           <div class="flow-col"><div class="fn"><b>Kassa</b><small>zoals altijd</small></div></div>
@@ -2664,18 +2700,18 @@
       <div class="w-info">
         <span class="pill live"><span class="d"></span>Live bij Koe in Otterlo</span>
         <h3>Naast je printer</h3>
-        <p>De standaard. Je kassa krijgt er één printer bij: Bill-e. Elke bon gaat
-          naar allebei. Je eigen bonprinter blijft aangesloten en doet precies wat
-          hij altijd deed.</p>
+        <p>Wil je papier erbij houden, of eerst een tijdje beide laten draaien?
+          Dan krijgt je kassa er één printer bij: Bill-e. Elke bon gaat naar
+          allebei, en je zet de bonprinter uit wanneer jij er klaar voor bent.</p>
         <dl>
           <div><dt>Je bonprinter</dt><dd>Blijft staan en print gewoon door.</dd></div>
           <div><dt>Je kassa</dt><dd>Eén extra printer erbij, eenmalig ingesteld. Wij helpen.</dd></div>
-          <div><dt>Valt Bill-e uit?</dt><dd>Dan merk je aan de kassa niets: de papieren bon werkt door.</dd></div>
+          <div><dt>Handig als</dt><dd>Je klanten nog om papier vragen, of je eerst wilt wennen.</dd></div>
         </dl>
       </div>
     </div>
 
-    <!-- 2 · between till and printer -->
+    <!-- 3 · option: between till and printer -->
     <div class="w-panel hidden" role="tabpanel" id="wp-tussen" aria-labelledby="wt-tussen">
       <div class="w-diagram">
         <div class="flow" aria-hidden="true">
@@ -2692,9 +2728,9 @@
       <div class="w-info">
         <span class="pill soon">In ontwikkeling</span>
         <h3>Tussen kassa en printer</h3>
-        <p>Voor kassa's die maar één printer kennen. Je kassa print naar Bill-e,
-          en Bill-e geeft elke bon meteen door aan je eigen bonprinter. Die
-          blijft dus ook hier gewoon staan.</p>
+        <p>Papier erbij, maar kent je kassa maar één printer? Dan print je kassa
+          naar Bill-e, en Bill-e geeft elke bon meteen door aan je eigen
+          bonprinter.</p>
         <dl>
           <div><dt>Je bonprinter</dt><dd>Blijft staan en print elke bon, via Bill-e.</dd></div>
           <div><dt>Je kassa</dt><dd>Print naar Bill-e in plaats van rechtstreeks naar de printer.</dd></div>
@@ -2703,37 +2739,7 @@
       </div>
     </div>
 
-    <!-- 3 · no paper -->
-    <div class="w-panel hidden" role="tabpanel" id="wp-zonder" aria-labelledby="wt-zonder">
-      <div class="w-diagram">
-        <div class="flow" aria-hidden="true">
-          <div class="flow-col"><div class="fn"><b>Kassa</b><small>zoals altijd</small></div></div>
-          <div class="flow-wire"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path class="wifi" d="M0 50 C50 50 50 25 100 25"/><path class="off" d="M0 50 C50 50 50 75 100 75"/></svg></div>
-          <div class="flow-col two">
-            <div class="fn bille"><b>Bill-e</b><small>in plaats van papier</small></div>
-            <div class="fn gone"><b>Bonrollen</b><small>niet meer nodig</small></div>
-          </div>
-          <div class="flow-wire"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path class="wifi" d="M0 25 H100"/></svg></div>
-          <div class="flow-col two">
-            <div class="fn"><b>Telefoon</b><small>digitale bon</small></div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-      <div class="w-info">
-        <span class="pill future">Later</span>
-        <h3>Zonder papier</h3>
-        <p>Voor wie helemaal van de bonrollen af wil. Bill-e neemt de plek van de
-          bonprinter in: elke bon is alleen nog digitaal. Dit bieden we aan zodra
-          de eerste twee opstellingen zich in de praktijk bewezen hebben.</p>
-        <dl>
-          <div><dt>Je bonprinter</dt><dd>Niet meer nodig. Geen bonrollen, geen papier.</dd></div>
-          <div><dt>Je kassa</dt><dd>Print naar Bill-e in plaats van naar papier.</dd></div>
-          <div><dt>Handig als</dt><dd>Je helemaal papierloos wilt werken.</dd></div>
-        </dl>
-      </div>
-    </div>
-    <p class="w-note reveal">Welke opstelling bij jou past, hangt af van je kassa en printer. Dat zoeken we samen uit.</p>
+    <p class="w-note reveal">Meteen zonder papier, of eerst naast je printer: dat kies je zelf. Wat bij je kassa past, zoeken we samen uit.</p>
 
     <div class="section-label moments-label reveal">Waar pakt je klant de bon?</div>
     <div class="moments">
@@ -2844,7 +2850,7 @@
               <span class="step-num">STAP <b>01</b></span>
               <div>
                 <div class="step-title">Klant betaalt bij de kassa</div>
-                <div class="step-desc">De klant betaalt zoals gewoonlijk. Er verandert niets aan het betaalproces — de papieren bon kan nog steeds gewoon geprint worden.</div>
+                <div class="step-desc">De klant betaalt zoals gewoonlijk. Er verandert niets aan het betaalproces, alleen komt de bon niet meer uit een printer.</div>
               </div>
             </div>
             <div class="phase-step">
@@ -3033,9 +3039,9 @@
         <summary>Hoe digitaliseer ik als ondernemer mijn kassabonnen?</summary>
         <p class="faq-answer">
           Met Bill-e hoef je je huidige systemen daarvoor vrijwel niet aan te
-          passen. Je kassa, printer en afrekenproces blijven precies zoals ze
-          zijn — Bill-e legt de bon vast op het moment van afdrukken en maakt
-          er automatisch een digitale versie van. Geen nieuwe kassasoftware,
+          passen. Je kassa en afrekenproces blijven precies zoals ze zijn: je
+          kassa print naar Bill-e in plaats van naar je bonprinter, en Bill-e
+          maakt van elke bon automatisch een digitale versie. Geen nieuwe kassasoftware,
           geen extra handelingen voor je personeel, en je klant opent de bon
           zonder app. Interesse als winkel of horecazaak? Neem contact op.
           Twijfel je wat je aan kassa-hardware nodig hebt? Lees
@@ -3047,7 +3053,7 @@
         <summary>Werkt Bill-e met mijn kassasysteem?</summary>
         <p class="faq-answer">
           Meestal wel — en je hoeft je kassa of kassasoftware er niet voor te
-          vervangen. Bill-e komt bij je op het netwerk als een extra
+          vervangen. Bill-e komt bij je op het netwerk als
           bonprinter. Kassa's die naar een bonprinter op het netwerk printen
           (veel systemen in horeca en retail, zoals unTill, MplusKASSA of
           Vectron) werken nu al; voor iPad- en cloudkassa's zoals Lightspeed,
@@ -3058,22 +3064,22 @@
       </details>
 
       <details class="faq-item reveal">
-        <summary>Moet ik mijn bonprinter loskoppelen voor Bill-e?</summary>
+        <summary>Kan ik mijn bonprinter wegdoen?</summary>
         <p class="faq-answer">
-          Nee. In de standaardopstelling komt Bill-e náást je bonprinter: je
-          kassa krijgt er één extra printer bij, en dat is Bill-e. Je eigen
-          bonprinter blijft aangesloten en print gewoon door, ook als Bill-e
-          een keer uitvalt. Je klant kan dus altijd nog een papieren bon
-          krijgen. <a href="#hoe-werkt-het">Bekijk de opstellingen →</a>
+          Ja, dat is precies het idee. Bill-e neemt de plek van je bonprinter
+          in: je kassa print naar Bill-e en je klant krijgt de bon op z'n
+          telefoon. Geen papier en geen bonrollen meer. Wil je toch papier
+          erbij houden, of eerst een tijdje beide laten draaien? Dan zet je
+          Bill-e náást je bonprinter. <a href="#hoe-werkt-het">Bekijk de opstellingen →</a>
         </p>
       </details>
 
       <details class="faq-item reveal">
         <summary>Wat gebeurt er als het internet even wegvalt?</summary>
         <p class="faq-answer">
-          Dan raak je geen bon kwijt. De Bill-e-unit bewaart de bonnen en
-          stuurt ze door zodra de verbinding terug is. Je papieren bon werkt
-          intussen gewoon door.
+          Dan raak je geen bon kwijt. De Bill-e-unit bewaart elke bon en
+          stuurt hem door zodra de verbinding terug is. Wil je klant de bon
+          dan nog? Je zet hem vanuit je beheerpagina terug op de tag.
         </p>
       </details>
 
@@ -3178,7 +3184,7 @@
       ['Partner #01', 'Koe · Otterlo'],
       ['Demo-bon', `€ 18,50 · ${dd}·${mm}·${yy}`],
       ['Geen nieuwe kassa', 'geen extra handeling'],
-      ['Je bonprinter', 'blijft gewoon staan'],
+      ['Je bonprinter', 'mag weg'],
       ['Geen app · geen account', 'één tik'],
       ['BTW', 'automatisch bijgehouden'],
       ['Pilotlocaties', 'gezocht · NL'],
@@ -3235,12 +3241,14 @@
       const unit = $('dm-unit'), tag = $('dm-tag'), phone = $('dm-phone');
       const paper = $('paper'), paperInner = $('paper-inner');
       const cloud = $('dm-cloud');
+      let withPrinter = false;            // standard setup: Bill-e only, no paper
 
       const CAPTIONS = {
         start: 'Jij staat achter de kassa. <b>Tik een paar producten aan</b>, of laat het automatisch afspelen.',
         order: 'Klaar met bestellen? Druk op <b>Afrekenen</b>.',
         paying: 'Je klant pint…',
-        printing: 'De kassa print zoals altijd naar <b>je eigen bonprinter</b>, en tegelijk naar <b>Bill-e</b> als extra printer. Er is niets losgekoppeld.',
+        printing: 'De kassa print naar <b>Bill-e</b>, zoals hij eerst naar de bonprinter printte. <b>Geen papier, geen bonrol.</b>',
+        printingBoth: 'De kassa print naar <b>je eigen bonprinter</b> én naar <b>Bill-e</b>. Zo houd je papier erbij zolang je wilt.',
         tap: 'Bill-e heeft de bon binnen. <b>Tik nu op de tag</b>, zoals je klant met z\'n telefoon doet.',
         done: 'Dezelfde bon, nu op de telefoon van je klant: artikelen, bedragen en BTW. <b>Geen app, geen account, geen e-mailadres.</b>',
       };
@@ -3443,11 +3451,11 @@
         if (my !== run) return;
         pay.textContent = 'Betaald ✓';
         pay.classList.add('paid');
-        caption('printing');
+        caption(withPrinter ? 'printingBoth' : 'printing');
         fillBonnen();
-        await Promise.all([packet('w-print', true), packet('w-wifi')]);
+        await Promise.all(withPrinter ? [packet('w-print', true), packet('w-wifi')] : [packet('w-wifi')]);
         if (my !== run) return;
-        printPaper();
+        if (withPrinter) printPaper();
         unit.dataset.led = 'send';
         await wait(300);
         await packet('w-up');
@@ -3527,6 +3535,23 @@
         auto = false;
         $('dm-auto').disabled = false;
       }
+
+      function setPrinter(on) {
+        withPrinter = on;
+        dm.dataset.paper = on ? 'on' : 'off';
+        const btn = $('dm-paper');
+        btn.setAttribute('aria-pressed', on);
+        btn.textContent = on ? '− Zonder bonprinter' : '+ Bonprinter erbij';
+        $('dm-printer-lbl').innerHTML = on ? 'Je eigen bonprinter <em>· optie</em>' : 'Bonprinter <em>· niet nodig</em>';
+        $('lbl-print').textContent = on ? 'zoals altijd' : 'uit';
+        $('lbl-wifi').textContent = on ? 'WiFi · extra printer' : 'WiFi · als printer';
+        redraw();
+      }
+      $('dm-paper').addEventListener('click', () => {
+        reset();
+        setPrinter(!withPrinter);
+        track('demo_printer', { on: withPrinter });
+      });
 
       pay.addEventListener('click', checkout);
       tag.addEventListener('click', tap);

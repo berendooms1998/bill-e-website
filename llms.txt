@@ -1,28 +1,28 @@
 # Bill-e
 
-> Bill-e is een Nederlands bedrijf (Apeldoorn) dat digitale kassabonnen levert voor winkels en horeca. De bon wordt op het moment van afdrukken bij de kassa automatisch digitaal vastgelegd — zonder nieuwe kassa of kassasoftware voor de winkel, en zonder app, account of e-mailadres voor de klant: die tikt met de telefoon op een NFC-tag bij de kassa en heeft direct de volledige bon (artikelen, bedragen, BTW) via een permanente link. De Bill-e-unit neemt de plek van de bonprinter in, dus bonprinter en bonrollen kunnen weg; wie papier erbij wil houden, zet de unit naast de printer. Live sinds 2026 bij de eerste partner in Otterlo.
+> Bill-e is een Nederlands bedrijf (Apeldoorn) dat digitale kassabonnen levert voor winkels en horeca. De bon wordt op het moment van afdrukken bij de kassa automatisch digitaal vastgelegd — zonder nieuwe kassa of kassasoftware voor de winkel, en zonder app, account of e-mailadres voor de klant: die tikt met de telefoon op een NFC-tag bij de kassa en heeft direct de volledige bon (artikelen, bedragen, BTW) via een permanente link. De Bill-e-unit neemt de plek van de bonprinter in, dus bonprinter en bonrollen kunnen weg; wie papier erbij wil houden, zet de unit naast de printer. In pilotfase sinds 2026; pilotlocaties gezocht.
 
 Bill-e is a Dutch startup providing digital receipts for shops and hospitality venues. Receipts are captured automatically at the point of sale (no POS replacement needed); the Bill-e unit takes the receipt printer's place, so the printer and paper rolls can go (or it runs alongside the printer for shops that want paper); customers tap an NFC tag to open their full itemised receipt in the browser — no app, no account, no e-mail address.
 
 ## Belangrijkste pagina's
 
-- [Home](https://www.bill-e.com/): wat Bill-e is, hoe het werkt (twee fasen), voor wie, interactieve demo, contact voor pilotlocaties
+- [Home](https://www.bill-e.com/): wat Bill-e is, hoe het werkt, voor wie, interactieve demo, contact voor pilotlocaties
 - [Prijzen](https://www.bill-e.com/prijzen): hoe de prijs werkt — de Bill-e-unit in bruikleen (geen aanschaf), een vast basisbedrag per maand per kassa plus een klein bedrag per bon, prijs op aanvraag; voor de klant altijd gratis. Bevat een rekenhulp voor wat papieren bonrollen kosten
 - [De digitale kassabon](https://www.bill-e.com/digitale-kassabon): complete gids — soorten digitale bonnen, rechtsgeldigheid, waarom thermisch papier verdwijnt (BPA/BPS), waarom digitale bonnen tot nu toe alleen bij grote ketens bestaan
 - [Bonnetjes bewaren](https://www.bill-e.com/bonnetjes-bewaren): bewaartermijnen voor de Belastingdienst — 7 jaar voor ondernemers, 10 jaar bij onroerend goed, digitaal bewaren toegestaan
 - [Kassabon kwijt & garantie](https://www.bill-e.com/kassabon-kwijt): wettelijke garantie geldt ook zonder bon; welke aankoopbewijzen tellen
-- [Bonprinter vervangen — kosten en werkt het met jouw kassa?](https://www.bill-e.com/bonprinter-vervangen): wat een bonprinter echt kost (aanschaf € 100–350, bonrollen, onderhoud), wanneer je het apparaat nog nodig houdt (kassalade via RJ12, werkbonnen keuken), wat "je bonprinter vervangen" echt betekent (klantbon vs. lade/keuken) en met welke kassasystemen Bill-e nu werkt (netwerk-bonprinter via poort 9100) en binnenkort (Lightspeed, Square, SumUp)
+- [Bonprinter vervangen — kosten en werkt het met jouw kassa?](https://www.bill-e.com/bonprinter-vervangen): wat een bonprinter echt kost (aanschaf € 100–350, bonrollen, onderhoud), wanneer je het apparaat nog nodig houdt (kassalade via RJ12, werkbonnen keuken), wat "je bonprinter vervangen" echt betekent (klantbon vs. lade/keuken) en met welke kassa-opstellingen Bill-e nu werkt (netwerk-bonprinter via poort 9100) en welke in test zijn (iPad- en cloudkassa's zoals Lightspeed, Square, SumUp)
 - [Is een kassabon verplicht?](https://www.bill-e.com/kassabon-verplicht): geen ongevraagde bonplicht in Nederland, wel recht op een betalingsbewijs op verzoek — dat mag ook digitaal
 - [Btw terugvragen met een kassabon](https://www.bill-e.com/kassabon-btw): kassabon telt tot € 100 incl. btw als vereenvoudigde factuur; welke gegevens erop moeten staan
 - [Privacybeleid](https://www.bill-e.com/privacy): welke gegevens Bill-e verwerkt, in gewone taal
 
 ## Feiten
 
-- Prijs voor winkels & horeca: op aanvraag (pilotfase) — de Bill-e-unit in bruikleen, een vast basisbedrag per maand per kassa plus een klein bedrag per bon; onbeperkt aantal bonnen, maandelijks opzegbaar
+- Prijs voor winkels & horeca: op aanvraag (pilotfase) — de Bill-e-unit in bruikleen, een vast basisbedrag per maand per kassa plus een klein bedrag per bon; geen limiet op het aantal bonnen, maandelijks opzegbaar
 - Werkt naast elk bestaand kassasysteem; geen extra handeling voor personeel
 - Klant heeft geen app, account of e-mailadres nodig — één tik op de NFC-tag
 - Digitale bonnen zijn rechtsgeldig voor de Belastingdienst en als garantiebewijs
-- Eerste partner: restaurant Koe in Otterlo (live)
+- Status: pilotfase, de eerste pilot draait; pilotlocaties gezocht
 - Oprichter: Berend Ooms, Apeldoorn, Nederland
 
 ## Contact
